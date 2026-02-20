@@ -1,8 +1,8 @@
 site_name: BMEVIAUBXAV081 - Mesterséges intelligencia alapú szoftverek és szolgáltatások fejlesztése laborfeladatok
-site_author: Csorba Kristóf, Ekler Péter, Békési Gergő Bendegúz, Knyihár Gábor, Pomázi Krisztián, Puskin Artyom, Szűcs Cintia Lia
+site_author: Csorba Kristóf, Ekler Péter, Békési Gergő Bendegúz, Knyihár Gábor, Pomázi Krisztián, Puskin Artyom, Szűcs Cintia Lia, Fodor Ferenc
 copyright: Copyright &copy; BME VIK AUT
-repo_name: viaubxav081/laborok
-repo_url: https://github.com/viaubxav081/laborok
+repo_name: viaubxav081/tudnivalok
+repo_url: https://github.com/viaubxav081/tudnivalok
 
 theme:
   name: material
@@ -76,16 +76,16 @@ plugins:
       timezone: Europe/Budapest
       locale: hu
   - git-committers:
-      repository: viaubxav081/laborok
+      repository: viaubxav081/tudnivalok
       branch: main
 
 nav:
   - "Tudnivalók":
       - index.md
-      - tudnivalok/github/GitHub.md
-      - tudnivalok/github/GitHub-Actions.md
-      - tudnivalok/github/GitHub-credentials.md
-      - tudnivalok/github/contributing.md
+      - github/GitHub.md
+      - github/GitHub-Actions.md
+      - github/GitHub-credentials.md
+      - github/contributing.md
   - "Laborok":
       - laborok/mlops/index.md 
       - laborok/rl/index.md
