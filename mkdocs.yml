@@ -92,3 +92,6 @@ nav:
       - laborok/cv/index.md
       - laborok/fullstack/index.md
       - laborok/android/index.md
+  - "Demók":
+      - demok/ai-service/index.md
+      - demok/fullstack/index.md
