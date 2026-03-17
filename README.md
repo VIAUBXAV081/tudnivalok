@@ -1,6 +1,6 @@
 # Mesterséges intelligencia alapú szoftverek és szolgáltatások fejlesztése - Laborok
 
-![Build docs](https://github.com/viaubxav081/laborok/workflows/Build%20docs/badge.svg?branch=main)
+![Build docs](https://github.com/VIAUBXAV081/tudnivalok/actions/workflows/github-pages.yml/badge.svg?branch=main)
 
 [BMEVIAUBXAV081 - Mesterséges intelligencia alapú szoftverek és szolgáltatások fejlesztése](https://www.aut.bme.hu/Course/VIAUBXAV081) tárgy laborfeladatai.
 
