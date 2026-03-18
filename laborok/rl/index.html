@@ -465,9 +465,88 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          RL Labor
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         RL Labor
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#a-labor-celja" class="md-nav__link">
+    A labor célja
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-labor-felepitese" class="md-nav__link">
+    A labor felépítése
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mit-varok-el-a-notebookok-hasznalata-soran" class="md-nav__link">
+    Mit várok el a notebookok használata során?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-beadando" class="md-nav__link">
+    A beadandó
+  </a>
+  
+    <nav class="md-nav" aria-label="A beadandó">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-beadando-alapfeladata" class="md-nav__link">
+    A beadandó alapfeladata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fontos-megjegyzes-a-beadandohoz" class="md-nav__link">
+    Fontos megjegyzés a beadandóhoz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#megajanlott-jegyhez" class="md-nav__link">
+    Megajánlott jegyhez
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -605,6 +684,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#a-labor-celja" class="md-nav__link">
+    A labor célja
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-labor-felepitese" class="md-nav__link">
+    A labor felépítése
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mit-varok-el-a-notebookok-hasznalata-soran" class="md-nav__link">
+    Mit várok el a notebookok használata során?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-beadando" class="md-nav__link">
+    A beadandó
+  </a>
+  
+    <nav class="md-nav" aria-label="A beadandó">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-beadando-alapfeladata" class="md-nav__link">
+    A beadandó alapfeladata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fontos-megjegyzes-a-beadandohoz" class="md-nav__link">
+    Fontos megjegyzés a beadandóhoz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#megajanlott-jegyhez" class="md-nav__link">
+    Megajánlott jegyhez
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -622,7 +764,81 @@
 
 
 <h1 id="rl-labor">RL Labor<a class="headerlink" href="#rl-labor" title="Permanent link">¶</a></h1>
-<p>Hamarosan ...</p>
+<h2 id="a-labor-celja">A labor célja<a class="headerlink" href="#a-labor-celja" title="Permanent link">¶</a></h2>
+<p>Ennek a laboranyagnak <strong>nem az a célja</strong>, hogy teljesen nulláról, önállóan találd ki, hogyan kell a különböző reinforcement learning algoritmusokat implementálni és használni.</p>
+<p>A notebookokat azért állítottam össze, hogy a <strong>már létező, működő megoldásokon keresztül</strong> értsd meg:</p>
+<ul>
+<li>hogyan működik egy RL-környezet a gyakorlatban,</li>
+<li>hogyan viselkednek a különböző algoritmusok,</li>
+<li>milyen szerepe van az egyes hiperparamétereknek,</li>
+<li>és hogyan befolyásolják ezek a tanulás stabilitását, sebességét és eredményességét.</li>
+</ul>
+<p>Ez a labor tehát elsősorban <strong>értelmező és kísérletező szemléletű</strong>.<br>
+A hangsúly azon van, hogy:</p>
+<ul>
+<li>futtass meglévő megoldásokat,</li>
+<li>figyeld meg a tanulási görbéket és a policy viselkedését,</li>
+<li>próbáld ki különböző beállításokat,</li>
+<li>és ezek alapján értsd meg az algoritmusok közötti különbségeket.</li>
+</ul>
+<h2 id="a-labor-felepitese">A labor felépítése<a class="headerlink" href="#a-labor-felepitese" title="Permanent link">¶</a></h2>
+<p>A labort több notebookból építettem fel, amelyek egymásra épülnek:</p>
+<ol>
+<li><strong>RL környezetek alapjai és vizualizáció</strong></li>
+<li><strong>Q-learning</strong></li>
+<li><strong>DQN</strong></li>
+<li><strong>PPO</strong></li>
+<li><strong>Projektfeladat felvezetése</strong></li>
+</ol>
+<p>A notebookokban kész vagy majdnem kész megoldásokat adok, és ezek alapján azt kérem tőled, hogy:</p>
+<ul>
+<li>értsd meg a fontos lépéseket,</li>
+<li>értelmezd az ábrákat és animációkat,</li>
+<li>válaszold meg a notebookok végén található kérdéseket,</li>
+<li>majd a megszerzett tapasztalatokat alkalmazd egy saját projektben.</li>
+</ul>
+<h2 id="mit-varok-el-a-notebookok-hasznalata-soran">Mit várok el a notebookok használata során?<a class="headerlink" href="#mit-varok-el-a-notebookok-hasznalata-soran" title="Permanent link">¶</a></h2>
+<p>A notebookokkal való munka során nemcsak azt várom tőled, hogy lefuttasd a cellákat, hanem azt is, hogy tudatosan figyeld meg például:</p>
+<ul>
+<li>hogyan változik a tanulás különböző hiperparaméterek mellett,</li>
+<li>mikor stabil vagy instabil egy algoritmus,</li>
+<li>hogyan viselkedik az exploráció,</li>
+<li>milyen különbség látszik a tanulatlan és a betanított policy között,</li>
+<li>és milyen környezetekhez milyen algoritmus illik jobban.</li>
+</ul>
+<h2 id="a-beadando">A beadandó<a class="headerlink" href="#a-beadando" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A laborhoz a <strong>megoldas.ipynb notebookot</strong> kérem beadni. Ebben a notebookban neked egy saját magad által kiválasztott környezeten kell bemutatnod legalább egy, a labor során megismert algoritmus alkalmazását.</p>
+</div>
+<h3 id="a-beadando-alapfeladata">A beadandó alapfeladata<a class="headerlink" href="#a-beadando-alapfeladata" title="Permanent link">¶</a></h3>
+<ol>
+<li>választasz egy környezetet,</li>
+<li>röviden bemutatod azt,</li>
+<li>kiválasztasz egy megfelelő algoritmust,</li>
+<li>betanítasz egy modellt,</li>
+<li>kiértékeled annak teljesítményét,</li>
+<li>és röviden értelmezed az eredményeket.</li>
+</ol>
+<h3 id="fontos-megjegyzes-a-beadandohoz">Fontos megjegyzés a beadandóhoz<a class="headerlink" href="#fontos-megjegyzes-a-beadandohoz" title="Permanent link">¶</a></h3>
+<p>A beadandóval <strong>nem</strong> az a célom, hogy a lehető legnehezebb környezetet válaszd, és nem is az, hogy minden esetben tökéletes eredményt érj el.</p>
+<p>Nálam ezek a fő szempontok:</p>
+<ul>
+<li>jó környezetválasztás,</li>
+<li>indokolt algoritmusválasztás,</li>
+<li>átlátható kísérletezés,</li>
+<li>helyes értelmezés,</li>
+<li>és a tanulási folyamat megértése.</li>
+</ul>
+<p>Vagyis egy egyszerűbb, de jól bemutatott és jól értelmezett projekt nálam értékesebb lehet, mint egy túl nehéz, de átgondolatlan választás.</p>
+<h3 id="megajanlott-jegyhez">Megajánlott jegyhez<a class="headerlink" href="#megajanlott-jegyhez" title="Permanent link">¶</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Opcionális feladat beadandó (10 pont)</p>
+<ul>
+<li>Két környezet feldolgozása két külön algoritmussal</li>
+<li>Mindkét megoldás részletes leírása</li>
+</ul>
+</div>
 
     <hr>
   <div class="md-source-file">
@@ -631,8 +847,8 @@
           </path>
         </svg>
       </span>
-      <span title="2026. február 20. 11:56:06">
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026. február 20. 11:56:06 CET"><span class="timeago" datetime="2026-02-20T11:56:06+01:00" locale="hu"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026. február 20. 11:56:06 CET">2026-02-20</span>
+      <span title="2026. március 18. 15:59:46">
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026. március 18. 15:59:46 CET"><span class="timeago" datetime="2026-03-18T15:59:46+01:00" locale="hu"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026. március 18. 15:59:46 CET">2026-03-18</span>
       </span>
     </span>
 
@@ -646,7 +862,9 @@
         </svg>
       </span>
       <span>Szerzők</span>
-      <nav><a href="https://github.com/gknyihar" target="_blank" rel="noopener noreferrer" class="md-author" title="@gknyihar">
+      <nav><a href="https://github.com/ferkofodor-dtu" target="_blank" rel="noopener noreferrer" class="md-author" title="@ferkofodor-dtu">
+          <img src="https://avatars.githubusercontent.com/u/98709235?v=4?size=72" alt="@ferkofodor-dtu">
+        </a><a href="https://github.com/gknyihar" target="_blank" rel="noopener noreferrer" class="md-author" title="@gknyihar">
           <img src="https://avatars.githubusercontent.com/u/99642826?v=4?size=72" alt="@gknyihar">
         </a></nav>      
     </span>
