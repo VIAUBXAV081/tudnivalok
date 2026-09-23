@@ -4,13 +4,13 @@ A labor során önállóan fogsz elkészíteni egy egyszerű osztályozó modell
 
 ## Előkészület
 
-A feladatok megoldásához az alábbi telepített szoftverekre van szükség (alternatívaként használhatjuk a [BME Cloud](https://cloud.bme.hu/) egyik virtuális gépét):
+A feladatok megoldásához az alábbi telepített szoftverekre van szükség (alternatívaként használhatjuk a [BME Cloud](https://cloud.bme.hu/) egyik virtuális gépét, előkészített image-ért keresd a labor felelősét):
 
-* [Docker Desktop](https://www.docker.com/products/docker-desktop/) vagy egyéb Docker-konténer futtatására alkalmas környezet
-* [Python](https://www.python.org/) futtatókörnyezet (3.12-es verzió)
-* [VS Code](https://code.visualstudio.com/) vagy egyéb kódszerkesztő
-* [Git](https://git-scm.com/)
-* [Poetry](https://python-poetry.org/) vagy egyéb függőségkezelő (opcionális, de erősen javasolt)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) vagy egyéb Docker-konténer futtatására alkalmas környezet
+- [Python](https://www.python.org/) futtatókörnyezet (3.12-es verzió)
+- [VS Code](https://code.visualstudio.com/) vagy egyéb kódszerkesztő
+- [Git](https://git-scm.com/)
+- [uv](https://docs.astral.sh/uv/), [Poetry](https://python-poetry.org/) vagy egyéb függőségkezelő (opcionális, de erősen javasolt)
 
 !!! warning "Technológiák"
     A labor során több (számodra akár teljesen új) technológiával is kell dolgoznod. Ez nem öncélú bonyolítás, az MLOps világában a fejlesztők általában kész, összetett céges infrastruktúrával dolgoznak, amelyet külön IT csapatok tartanak karban. Mivel ilyen környezetet most nem tudunk készen adni, kisebb léptékben szimuláljuk. Emiatt neked kell néhány komponenst telepíteni és összekapcsolni. Előfordulhat, hogy bizonyos lépések értelmét csak később látod meg, de így könnyebben megérted majd, hogyan működik egy valós MLOps rendszer, és mire számíthatsz a munka világában.
@@ -29,17 +29,55 @@ A feladatok megoldása során ne felejtsd el követni a feladatbeadás folyamat�
 Már most érdemes létrehozni egy virtuális környezetet a projekt gyökerében, és azt aktiválni. A virtuális környezet célja, hogy a Python csomagokat, amiket használni fogsz, ne globálisan kelljen feltelepíteni, hanem csak az adott projektre vonatkozóan. Így nem fog problémát okozni az, hogy ebben a projektben az egyik csomagból az egyik verziót használod, míg egy másikban ugyanabból a csomagból egy másikat.
 
 !!! tip "Tipp"
-    A virtuális környezet létrehozásához az alábbi leírás a `poetry`-t javasolja. Ettől saját felelősségre el lehet térni, de erősen    ajánlott ennek használata. Ha elakadnátok, bátran kérjetek segítséget.
+    A virtuális környezet létrehozásához az alábbi leírás az `uv`-t vagy a `poetry`-t javasolja. Ettől saját felelősségre el lehet térni, de erősen ajánlott ennek használata. Ha elakadnátok, bátran kérjetek segítséget.
 
-1. Nyiss meg egy parancssort a projekt gyökerében, és add ki a `poetry install` parancsot. Ez létrehozza az előre konfigurált virtuális környezetet a `.venv` mappában.
+1. Nyiss meg egy parancssort a projekt gyökerében, és hozd létre az előre konfigurált virtuális környezetet a `.venv` mappában.
 
-2. A környezet aktiválásához a `.\.venv\Scripts\activate` parancsot kell futtatni.
+    === "uv"
+
+        ```powershell
+        uv sync
+        ```
+
+    === "Poetry"
+
+        ```powershell
+        poetry install
+        ```
+
+    !!! note "Windows, Linux és macOS"
+        Az útmutató példái elsősorban **Windows + PowerShell** környezetben lettek tesztelve. Azokat a lépéseket, ahol a Windows, Linux és macOS használata között eltérés van, külön jelezzük az adott platformhoz tartozó alternatív parancsokkal. Az utasításokat mindig a **projekt gyökerében** kell végrehajtani.
+
+2. Aktiváld a virtuális környezetet.
+
+    === "Windows + PowerShell"
+        ```powershell
+        .\.venv\Scripts\Activate.ps1
+        ```
+    === "Linux / macOS"
+        ```bash
+        source .venv/bin/activate
+        ```
 
     !!! note "Megjegyzés"
-        A parancssoros környezettől függően ez eltérő lehet, tájékozódjunk az opciókról a [dokumentációban](https://python-poetry.org/docs/managing-environments/#activating-the-environment). Az útmutató példái Windows-on PowerShell használatára építenek, ezeket az utasításokat mindig a projekt gyökerében kell kiadni. Ha a `PS>` előtagot látjátok, az a parancssorra utal, ezt nem kell beírni.
+        A csomagkezelők használata esetén a virtuális környezet aktiválása alapesetben nem szükséges. A parancsok közvetlenül is futtathatók a `run` segítségével. Ebben az esetben azonban minden parancs elé ki kell írni a megfelelő előtagot.
 
-3. Sikeres aktiváció után a parancssorban megjelenik a virtuális környezet neve a sor elején (pl.: `(lab03-mlops-py3.12) PS ... > `)
+        === "uv"
+            ```powershell
+            uv run python main.py
+            uv run dvc init
+            # ... stb
+            ```
+        === "Poetry"
+            ```powershell
+            poetry run python main.py
+            poetry run dvc init
+            # ... stb
+            ```
+        Az útmutatóban az egyszerűség kedvéért ezért a virtuális környezet **aktiválását preferáljuk** inkább.
+        
 
+3. Sikeres aktiváció után a parancssorban megjelenik a virtuális környezet neve a sor elején (pl.: `(lab01-mlops-py3.12) PS ... >`)
 4. Ezután minden parancsot ebben a parancssorban adjunk ki, különben egyes komponenseket lehet, hogy nem fog megtalálni a rendszer.
 
 ### Az elkészítendő pipeline
@@ -51,27 +89,27 @@ A labor során egy egyszerű osztályozó modellt kell készítened. Az egyszer�
 
 A modell elkészítésén felül az alábbi témakörökkel kell megbirkózni:
 
-* Verziókezelés
-* Üzembe helyezés
-* Monitorozás
-* Automatizálás
+- Verziókezelés
+- Üzembe helyezés
+- Monitorozás
+- Automatizálás
 
 ## Kiinduló projekt felépítése
 
 A kiinduló projekt számos fájlt tartalmaz, így fontos, hogy átlássuk, mit hol kell keresni. Itt egy rövid összefoglaló, hogy az egyes mappák és fájlok milyen célt szolgálnak.
 
-* `.github` mappa: A labor beadásához és ellenőrzéséhez szükséges konfigurációs fájlok.
-* `api` mappa: Ide kerül az API megvalósításához szükséges kód.
-* `data` és `models` mappa: Adatokat és modelleket tartalmazó mappa, ezek tartalmát többnyire nem commitoljuk.
-* `docker-compose.yaml`: A Docker-konténerek egyszerű indításához és összekapcsolásához szükséges leíró fájl.
-* `main.py`: A projekt elsődleges belépési pontja.
-* `poetry.lock`, `poetry.toml`, `pyproject.toml`: A projekt és csomagkezelő konfigurációs fájljai, itt találjuk majd a függőségeket. Kézzel nem kell őket módosítani.
-* `prometheus.yml`: A monitorozó eszköz konfigurációs fájlja.
+- `.github` mappa: A labor beadásához és ellenőrzéséhez szükséges konfigurációs fájlok.
+- `api` mappa: Ide kerül az API megvalósításához szükséges kód.
+- `data` és `models` mappa: Adatokat és modelleket tartalmazó mappa, ezek tartalmát többnyire nem commitoljuk.
+- `docker-compose.yaml`: A Docker-konténerek egyszerű indításához és összekapcsolásához szükséges leíró fájl.
+- `main.py`: A projekt elsődleges belépési pontja.
+- `uv.lock` / `poetry.lock`, `poetry.toml`, `pyproject.toml`: A projekt és csomagkezelő konfigurációs fájljai, itt találjuk majd a függőségeket. Kézzel nem kell őket módosítani.
+- `prometheus.yml`: A monitorozó eszköz konfigurációs fájlja.
 
 A virtuális környezet létrehozása után találkozni fogunk még a `.poetry` és a `.venv` mappákkal is:
 
-* `.poetry` mappa: A Poetry belső fájljait tartalmazza.
-* `.venv` mappa: A Python virtuális környezet, amely a telepített csomagokat tartalmazza.
+- `.poetry` mappa: A Poetry belső fájljait tartalmazza.
+- `.venv` mappa: A Python virtuális környezet, amely a telepített csomagokat tartalmazza.
 
 ## 1. feladat: Adatok előfeldolgozása és verziózása
 
@@ -79,9 +117,22 @@ A virtuális környezet létrehozása után találkozni fogunk még a `.poetry` 
 
 Szoftverek fejlesztése során a forráskód verziókezelésére fektetjük általában a legnagyobb hangsúlyt. MI-alkalmazások fejlesztése során azonban az adat is hasonló fontossággal bír, melynek verziókezelése nagyobb kihívással jár. Ennek oka elsősorban az, hogy a hagyományos verziókezelők kis méretű szöveges fájlokra optimalizáltak. Az adatok verziókezelésére egy remek eszköz a [DVC](https://dvc.org/doc/start), ami a gittel összehangolva működik. Elve, hogy az adatfájlokra mutató leíró fájlokat hoz létre a repository-ban, melyeket hagyományosan tudunk verziózni. A leíró fájlok alapján a DVC azonosítani tudja az adat megfelelő verzióját, és azt egy külön tárból tudja betölteni. A DVC előnye, hogy a hasonló Git LFS-hez képest rugalmasabban konfigurálható, hogy milyen tárat választunk az adatoknak.
 
-1. Telepítsd az eszközt a `poetry add dvc` paranccsal.
+1. Telepítsd fel a DVC eszközt.
+
+    === "uv"
+
+        ```powershell
+        uv add dvc
+        ```
+        
+    === "Poetry"
+
+        ```powershell
+        poetry add dvc
+        ```
+
 2. Inicializáld a projektet a `dvc init` parancs segítségével. Ez létrehoz egy `.dvc` mappát, amit majd fontos lesz commitolni is, hisz ez tartalmazza majd az adatfájlok tényleges elérési útvonalát.
-3. A `dvc remote add -d myremote C:\Users....` parancs segítségével állíts be egy tetszőleges lokális mappát az adatok tárának. Olyan mappát válasszunk, ami a projekt mappáján kívül helyezkedik el. A parancsban a `myremote` név tetszőlegesen változtatható.
+3. A `dvc remote add -d myremote <útvonal>` parancs segítségével állíts be egy tetszőleges lokális mappát az adatok tárának (pl. Windows esetén `C:\Users\...`, Linux/macOS esetén `/home/felhasznalo/...`). Olyan mappát válasszunk, ami a projekt mappáján kívül helyezkedik el. A parancsban a `myremote` név tetszőlegesen változtatható.
 
 !!! note "Megjegyzés"
     A valóságban adattárnak javasolt valamilyen távoli szerver útvonalat, vagy Google Drive tárhelyet megadni, de ezek konfigurálása komplexebb, ezért használjuk a lokális mappát ebben a példában.
@@ -118,7 +169,19 @@ A feladat első lépéseként szerezd be az adatkészletet, amin tanítani fogod
 
 Mielőtt felhasználnád az adatokat, szükség van előfeldolgozásra. A DVC egy nagyon hasznos funkciója, a data pipeline-ok létrehozása. Ennek segítségével létre tudunk hozni egy automatikus előfeldolgozó folyamatot. Ennek a folyamatnak meg tudunk adni függőségeket és kimeneteket, és csak akkor fog lefutni, ha a függőségek közül valami módosult, vagy ha a kimenetek közül valamelyik nem létezik. A kimeneti fájlok automatikusan bekerülnek a verziókövetett fájlok közé, ezeket nem kell hozzáadni manuálisan. A pipeline leírása a `dvc.yaml` fájlba kerül, a verziókövetett fájlok pedig a `dvc.lock` fájlba.
 
-1. Telepítsd a `pandas` és `scikit-learn` csomagokat a `poetry add pandas scikit-learn` paranccsal.
+1. Telepítsd a `pandas` és `scikit-learn` csomagokat.
+
+    === "uv"
+
+        ```powershell
+        uv add pandas scikit-learn
+        ```
+        
+    === "Poetry"
+
+        ```powershell
+        poetry add pandas scikit-learn
+        ```
 
 2. Hozz létre egy `preprocess.py` fájlt a projekt gyökerébe, ebbe a fájlba készül el az előfeldolgozó script:
 
@@ -184,21 +247,32 @@ Mielőtt felhasználnád az adatokat, szükség van előfeldolgozásra. A DVC eg
 
 3. Add hozzá a `preprocess.py` fájlt a DVC data pipeline-hoz:
 
-    * A `dvc stage add` paranccsal lehet hozzáadni lépéseket,
-    * A `-n` kapcsolóval a lépés nevét,
-    * A `-d` kapcsolóval a függőségeket,
-    * A `-o` kapcsolóval pedig a kimeneteket adjuk meg,
-    * A további argumentumok a lépés futtatásának módját írják le.
+    - A `dvc stage add` paranccsal lehet hozzáadni lépéseket,
+    - A `-n` kapcsolóval a lépés nevét,
+    - A `-d` kapcsolóval a függőségeket,
+    - A `-o` kapcsolóval pedig a kimeneteket adjuk meg,
+    - A további argumentumok a lépés futtatásának módját írják le.
 
-    ```powershell
-    PS> dvc stage add -n preprocess `
-                -d preprocess.py `
-                -d data/data.csv `
-                -o data/train.csv `
-                -o data/test.csv `
-                -o data/classes.json `
-                python preprocess.py
-    ```
+    === "Windows + PowerShell"
+        ```powershell
+        dvc stage add -n preprocess `
+                    -d preprocess.py `
+                    -d data/data.csv `
+                    -o data/train.csv `
+                    -o data/test.csv `
+                    -o data/classes.json `
+                    python preprocess.py
+        ```
+    === "Linux / macOS"
+        ```bash
+        dvc stage add -n preprocess \
+                    -d preprocess.py \
+                    -d data/data.csv \
+                    -o data/train.csv \
+                    -o data/test.csv \
+                    -o data/classes.json \
+                    python preprocess.py
+        ```
 
 4. Futtasd a pipeline-t a `dvc repro` paranccsal, és ellenőrizd a létrejövő fájlok tartalmát.
 
@@ -210,8 +284,8 @@ Mielőtt felhasználnád az adatokat, szükség van előfeldolgozásra. A DVC eg
 ### Beadandó
 
 !!! example "1. feladat beadandó"
-    * Commitold a változtatásokat.
-    * Készíts egy képernyőképet a verziókövetett fájlok listájáról (`dvc ls -R --dvc-only .`) és mentsd el a repository gyökerébe **`f1.png`** néven.
+    - Commitold a változtatásokat.
+    - Készíts egy képernyőképet a verziókövetett fájlok listájáról (`dvc ls -R --dvc-only .`) és mentsd el a repository gyökerébe **`f1.png`** néven.
 
 ## 2. feladat: Osztályozó modell elkészítése
 
@@ -290,9 +364,15 @@ Készítsünk egy egyszerű osztályozó modellt, felhasználva az előző lép�
 
         3. Készíts az eredmény alapján konfúziós mátrixot, és jelenítsd meg azt. A megjelenítéshez a [`matplotlib`](https://matplotlib.org/) csomagot tudod használni.
 
-            ```powershell
-            PS> poetry add matplotlib
-            ```
+            === "uv"
+                ```powershell
+                uv add matplotlib
+                ```
+
+            === "Poetry"
+                ```powershell
+                poetry add matplotlib
+                ```
 
             ```python
             from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
@@ -307,7 +387,7 @@ Készítsünk egy egyszerű osztályozó modellt, felhasználva az előző lép�
 3. Futtasd a modellt és elemezd az eredményeket.
 
     ```powershell
-    PS> python main.py
+    python main.py
     ```
 
     !!! warning "Változó eredmények"
@@ -423,9 +503,15 @@ A betanított modellek újrahasznosításához érdemes az elkészült modellt k
 
 1. Telepítsd a [`skl2onnx`](https://onnx.ai/sklearn-onnx/index.html) csomagot.
 
-    ```powershell
-    PS> poetry add skl2onnx
-    ```
+    === "uv"
+        ```powershell
+        uv add skl2onnx
+        ```
+
+    === "Poetry"
+        ```powershell
+        poetry add skl2onnx
+        ```
 
 2. Exportáld a betanított modellt `.onnx` formátumban a `models` mappába. Az `initial_types` paraméter értékének a bemenet típusát és méretét kell megadni.
 
@@ -450,19 +536,27 @@ Az exportált modell verzióit az adatokhoz hasonlóan akár a DVC eszközzel is
 Az MLflow használatához lokálisan futtathatunk egy MLflow-példányt, vagy kapcsolódhatunk egy központi szerverhez. Ebben a példában egy köztes megoldást választunk: futtatunk egy MLflow szervert egy Docker-konténerben. Ehhez már minden elő van készítve a `docker-compose.yaml` fájlban.
 
 !!! note "Docker konténerek és a Docker Compose"
-    A **Docker-konténerek** arra jók, hogy egy alkalmazást minden szükséges függőségével együtt, elkülönített és hordozható környezetben futtassunk. Így a program bárhol ugyanúgy működik, miközben a konténer könnyebb és gyorsabb, mint egy virtuális gép, mert a host operációs rendszer kernelét használja. Több konténer együttes kezelését a **Docker Compose** teszi lehetővé. Egy *YAML* fájlban leírható a teljes rendszer felépítése, majd egyetlen paranccsal (`docker-compose up`) az egész környezet egyszerre indítható el. Windows alatt a **Docker Desktop** alkalmazás telepítése szükséges konténerek futtatásához.
+    A **Docker-konténerek** arra jók, hogy egy alkalmazást minden szükséges függőségével együtt, elkülönített és hordozható környezetben futtassunk. Így a program bárhol ugyanúgy működik, miközben a konténer könnyebb és gyorsabb, mint egy virtuális gép, mert a host operációs rendszer kernelét használja. Több konténer együttes kezelését a **Docker Compose** teszi lehetővé. Egy _YAML_ fájlban leírható a teljes rendszer felépítése, majd egyetlen paranccsal (`docker compose up`) az egész környezet egyszerre indítható el. Windows alatt a **Docker Desktop** alkalmazás telepítése szükséges konténerek futtatásához.
 
 1. Futtasd az MLflow UI-t Docker segítségével.
 
     1. Indítsd el a Docker Desktop alkalmazást, ez a háttérben fog futni. Első indításkor be kell állítani, hogy Linux-konténerek futtatására alkalmas legyen. Erről [ezen a linken](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/set-up-linux-containers) tudsz részletesen olvasni.
-   
     2. Indítsd el a szükséges konténert, a UI-t a [localhost:5000](http://localhost:5000/) elérési úton találod.
 
         ```powershell
-        PS> docker-compose up -d mlflow
+        docker compose up -d mlflow
         ```
 
-2. Telepítsd az MLflow csomagot a `poetry add mlflow` parancs segítségével, hogy a scriptben is használni tudd.
+2. Telepítsd az MLflow csomagot, hogy a scriptben is használni tudd.
+
+    === "uv"
+        ```powershell
+        uv add mlflow
+        ```
+    === "Poetry"
+        ```powershell
+        poetry add mlflow
+        ```
 
 3. Módosítsd a korábbi scriptet úgy, hogy logolja a kísérleteket.
 
@@ -525,8 +619,8 @@ Az MLflow használatához lokálisan futtathatunk egy MLflow-példányt, vagy ka
 ### Beadandó
 
 !!! example "2. feladat beadandó"
-    * Commitold a változtatásokat.
-    * Készíts egy-egy képernyőképet az MLflow UI `Experiments / IrisDev` és `Models / IrisModel` felületéről, és mentsd el **`f2-1.png`** és **`f2-2.png`** néven a repository gyökerébe.
+    - Commitold a változtatásokat.
+    - Készíts egy-egy képernyőképet az MLflow UI `Experiments / IrisDev` és `Models / IrisModel` felületéről, és mentsd el **`f2-1.png`** és **`f2-2.png`** néven a repository gyökerébe.
 
 ## 3. feladat: Modell üzembe helyezése és futtatása
 
@@ -547,14 +641,19 @@ A projekt gyökerében már találunk egy előre elkészített `api` mappát, am
 
 1. Telepítsd az API-hoz szükséges `fastapi[all]` és az ONNX futtatáshoz szükséges `onnxruntime` csomagokat.
 
-    ```powershell
-    PS> poetry add fastapi[all] onnxruntime
-    ```
+    === "uv"
+        ```powershell
+        uv add fastapi[all] onnxruntime
+        ```
+    === "Poetry"
+        ```powershell
+        poetry add fastapi[all] onnxruntime
+        ```
 
 2. Futtasd az API-t és nézd meg a [http://localhost:8000/docs](http://localhost:8000/docs) oldalt.
 
     ```powershell
-    PS> fastapi dev api/api.py
+    fastapi dev api/api.py
     ```
 
     !!! tip "Swagger használata"
@@ -666,7 +765,16 @@ A Docker konténer létrehozásához szükségünk lesz egy Docker Image-re, ami
     ```
 
     !!! note "Csomaglista fájlok"
-        A `requirements.txt` egy olyan csomaglista fájl, ami alapján egyszerűen tudunk Python környezetet telepíteni. Az aktuális projektünkben ez a `pyproject.toml` fájlnak felel meg, mivel ebben vannak a függőségek. Ahhoz viszont, hogy ezt használjuk, telepíteni kéne a `poetry`-t is a Docker környezetbe, míg a `requirements.txt`-t natívan támogatja. Ezt a fájlt elő tudjuk állítani az aktuális környezet lemásolásával, például a `pip freeze > api/requirements.txt` paranccsal, vagy a `poetry export --without-hashes --output api/requirements.txt` segítségével is, de jelen példában törekedjünk az egyszerűségre, és állítsuk össze kézzel.
+        A `requirements.txt` egy olyan csomaglista fájl, ami alapján egyszerűen tudunk Python környezetet telepíteni. Az aktuális projektünkben ez a `pyproject.toml` fájlnak felel meg, mivel ebben vannak a függőségek. Ahhoz viszont, hogy ezt használjuk, telepíteni kéne csomagkezelőt is a Docker környezetbe, míg a `requirements.txt`-t natívan támogatja. Ezt a fájlt elő tudjuk állítani az aktuális környezet lemásolásával, például a `pip freeze > api/requirements.txt` paranccsal, vagy a csomagkezelővel a lenti parancs segítségével is, de jelen példában törekedjünk az egyszerűségre, és állítsuk össze kézzel.
+
+        === "uv"
+            ```powershell
+            uv export --format requirements.txt --no-hashes --output-file api/requirements.txt
+            ```
+        === "Poetry"
+            ```powershell
+            poetry export --without-hashes --output api/requirements.txt
+            ```
 
 2. Hozz létre egy `Dockerfile`-t szintén az `api` mappán belül az alábbiak szerint (szöveges fájl, nincs kiterjesztése):
 
@@ -770,14 +878,14 @@ Miután elkészültünk a leíróval, a konténer indítását és paraméterez�
             - mlflow
         ```
 
-2. Futtassuk a szolgáltatást a `docker-compose up -d api` paranccsal, és teszteljük a [http://localhost/docs](http://localhost/docs) elérési utat.
+2. Futtassuk a szolgáltatást a `docker compose up -d api` paranccsal, és teszteljük a [http://localhost/docs](http://localhost/docs) elérési utat.
 
 ### Beadandó
 
 !!! example "3. feladat beadandó"
-    * Commitold a változtatásokat.
-    * Készíts egy képernyőképet az API Swagger interfészéről, és mentsd el **`f3-1.png`** néven a repository gyökerébe.
-    * Készíts egy képernyőképet a Docker Desktop felületéről, vagy a `docker-compose ps -a` parancs kimenetéről, és mentsd el **`f3-2.png`** néven a repository gyökerébe.
+    - Commitold a változtatásokat.
+    - Készíts egy képernyőképet az API Swagger interfészéről, és mentsd el **`f3-1.png`** néven a repository gyökerébe.
+    - Készíts egy képernyőképet a Docker Desktop felületéről, vagy a `docker compose ps -a` parancs kimenetéről, és mentsd el **`f3-2.png`** néven a repository gyökerébe.
 
 ## 4. feladat: API monitorozása
 
@@ -791,9 +899,14 @@ A monitorozás push-pull elven fog működni, ami azt jelenti, hogy az API-nak e
 
     1. Telepítsd a [prometheus-fastapi-instrumentator](https://github.com/trallnag/prometheus-fastapi-instrumentator) csomagot.
 
-        ```powershell
-        PS> poetry add prometheus-fastapi-instrumentator
-        ```
+        === "uv"
+            ```powershell
+            uv add prometheus-fastapi-instrumentator
+            ```
+        === "Poetry"
+            ```powershell
+            poetry add prometheus-fastapi-instrumentator
+            ```
 
     2. Importáld az `Instrumentator` osztályt, és kapcsold be az `api.py` fájlban. Ez automatikusan publikálni fogja a `/metrics` végpontot, amin a belső állapotokat publikálja.
 
@@ -845,7 +958,7 @@ A monitorozás push-pull elven fog működni, ami azt jelenti, hogy az API-nak e
         return instrumentation
         ```
 
-    1. Regisztráld az új metrikát az `Instrumentator`-ban, ehhez módosítsd ezt a sort az alábbiak szerint.
+    5. Regisztráld az új metrikát az `Instrumentator`-ban, ehhez módosítsd ezt a sort az alábbiak szerint.
 
         ```python
         (Instrumentator(body_handlers=[r".*"])
@@ -855,7 +968,7 @@ A monitorozás push-pull elven fog működni, ami azt jelenti, hogy az API-nak e
         )
         ```
 
-   2. Indítsd újra az alkalmazást, és teszteld az API `/metrics` végpont kimenetét. Először a metrika még nem fog megjelenni a metrikák között, csak akkor, ha végzel néhány predikciót. Próbálj ki több különbözőt, hogy az összes osztálynév megjelenjen.
+    6. Indítsd újra az alkalmazást, és teszteld az API `/metrics` végpont kimenetét. Először a metrika még nem fog megjelenni a metrikák között, csak akkor, ha végzel néhány predikciót. Próbálj ki több különbözőt, hogy az összes osztálynév megjelenjen.
 
 3. Frissítsd az éles alkalmazást is a Docker konténerben, hogy képes legyen a metrikákat publikálni.
 
@@ -869,7 +982,7 @@ A monitorozás push-pull elven fog működni, ami azt jelenti, hogy az API-nak e
     2. Buildeld és indítsd újra a szolgáltatást.
 
         ```powershell
-        PS> docker-compose up -d --build api
+        docker compose up -d --build api
         ```
 
     3. Teszteld, hogy megjelentek a metrikák a [/metrics](http://localhost/metrics) végponton.
@@ -882,7 +995,7 @@ A Prometheus fogja gyűjteni az adott metrikákat. A szolgáltatás képes akár
 
     1. Adj meg neki egy tetszőleges `job_name` nevet (pl.: api).
     2. A `metrics_path` legyen `/metrics`, ez fogja mutatni, hol találja a metrikákat.
-    3. A `static_configs` alá vegyél fel egy `targets` bejegyzést, ami a szolgáltatás hostnevét tartalmazza. Itt is hasonlóan a docker-compose-ban található névre tudunk hivatkozni, ami szintén `api`. Mivel a 80-as porton kell hallgatózni, ezért a portot nem kell kiírni.
+    3. A `static_configs` alá vegyél fel egy `targets` bejegyzést, ami a szolgáltatás hostnevét tartalmazza. Itt is hasonlóan a docker compose-ban található névre tudunk hivatkozni, ami szintén `api`. Mivel a 80-as porton kell hallgatózni, ezért a portot nem kell kiírni.
 
     ```yaml
     global:
@@ -895,7 +1008,7 @@ A Prometheus fogja gyűjteni az adott metrikákat. A szolgáltatás képes akár
             - targets: [ 'api' ]
     ```
 
-2. Indítsd el a `prometheus` Docker konténert a `docker-compose up -d prometheus` parancs segítségével.
+2. Indítsd el a `prometheus` Docker konténert a `docker compose up -d prometheus` parancs segítségével.
 
 3. Vizsgáld meg a Prometheus UI felületét a [http://localhost:9090](http://localhost:9090) linken.
 
@@ -909,7 +1022,7 @@ A Prometheus fogja gyűjteni az adott metrikákat. A szolgáltatás képes akár
 
 Ahogy láttuk, a Prometheus is képes a gyűjtött metrikák vizualizálására, de nagyon limitáltak a lehetőségek. Komplexebb vizualizációkhoz a Grafanát szokták elterjedten használni.
 
-1. Futtasd a Grafana UI felületét a `docker-compose up -d grafana` paranccsal.
+1. Futtasd a Grafana UI felületét a `docker compose up -d grafana` paranccsal.
 2. Látogasd meg a [http://localhost:3000](http://localhost:3000) linket. Alapértelmezetten a felhasználónév és a jelszó is `admin`.
 3. Add hozzá a UI-hoz a Prometheus adatforrást.
 
@@ -917,7 +1030,7 @@ Ahogy láttuk, a Prometheus is képes a gyűjtött metrikák vizualizálására,
     2. Válaszd ki a `Prometheus` adatforrást, és menj az `Add new data source` gombra a jobb felső sarokban.
     3. A `Connection` alatt add meg a Prometheus szolgáltatás elérési útját, ami a `http://prometheus:9090` cím lesz.
     4. Mentsd el a konfigurációt a `Save & test` gombbal az oldal alján.
-   
+
 4. Hozz létre egy tetszőleges vizualizációt a Prometheus által összegyűjtött adatokra, és mentsd el egy dashboardra.
 
     1. Menj a `+` ikonra a jobb felső sarokban, és válaszd a `New dashboard` opciót.
@@ -927,14 +1040,14 @@ Ahogy láttuk, a Prometheus is képes a gyűjtött metrikák vizualizálására,
     5. A jobb oldali menüben a `Panel options` alatt add meg a `Predicted Classes` címet a `Title` mezőben.
     6. A grafikon felett jobb felső sarokban válaszd időtartománynak az utolsó 5 percet (`Last 5 minutes`), a `Refresh` alatt pedig a frissítési rátát 5 másodpercnek (`5s`).
     7. Mentsd el a dashboardot a `Save dashboard` opcióval `API` néven, majd menj a `Back to dashboard` gombra.
-   
+
 5. Csinálj néhány predikciót az API segítségével, és nézd meg, hogyan változnak az értékek a dashboardon.
 
 ### Beadandó
 
 !!! example "4. feladat beadandó"
-    * Commitold a változtatásokat.
-    * Készíts egy képernyőképet az elkészült Grafana dashboardról, és mentsd el **`f4.png`** néven a repository gyökerébe.
+    - Commitold a változtatásokat.
+    - Készíts egy képernyőképet az elkészült Grafana dashboardról, és mentsd el **`f4.png`** néven a repository gyökerébe.
 
 ## Opcionális feladat
 
@@ -955,13 +1068,13 @@ Automatizáljuk a tanítási és üzembe helyezési folyamatot. Adjunk lehetős�
 
 A [Prefect](https://docs.prefect.io/v3/get-started) egy Python-alapú gépi tanulási folyamatok automatizálására és ütemezésére szolgáló eszköz. Két fő részből áll:
 
-* **Prefect Server**: központi vezérlő és UI, amely nyomon követi a futásokat.
-* **Prefect Worker**: végrehajtó folyamat, amely a szervertől érkező feladatokat futtatja.
+- **Prefect Server**: központi vezérlő és UI, amely nyomon követi a futásokat.
+- **Prefect Worker**: végrehajtó folyamat, amely a szervertől érkező feladatokat futtatja.
 
 Automatizáláshoz a feladatokat `@flow` és `@task` dekorátorokkal definiáljuk Pythonban, majd a worker a szerver által kiadott runokat végrehajtja, így könnyen kezelhetők ütemezett tanítások vagy finetune folyamatok. A worker esetén két különböző logikával találkozhatunk:
 
-* **Általános worker**: bármilyen flow-t futtat, több különböző feladatot is képes kezelni ugyanabból a work poolból.
-* **Feladatspecifikus worker**: egy adott feladatra van optimalizálva, és csak az adott folyamat kódját tartalmazza, így izoláltabb működést biztosít.
+- **Általános worker**: bármilyen flow-t futtat, több különböző feladatot is képes kezelni ugyanabból a work poolból.
+- **Feladatspecifikus worker**: egy adott feladatra van optimalizálva, és csak az adott folyamat kódját tartalmazza, így izoláltabb működést biztosít.
 
 A Prefect tipikusan konténerizált komponensekből áll, és mindegyik külön-külön Docker konténerként futtatható.
 
@@ -974,11 +1087,11 @@ A Prefect tipikusan konténerizált komponensekből áll, és mindegyik külön-
     1. Töltsd be a korábbi tanító és tesztadatokat, továbbá a finomhangoláshoz használt adatokat (ez például lehet egy `finetune.csv` fájl, ami jelenleg még üres).
     2. Fűzd össze a tanító és finomhangoló adatokat, jegyezd meg, melyik sor mihez tartozik.
     3. Töltsd be a legfrissebb modellt (eredeti, nem ONNX) az MLflow Model Registryből.
-    4. Növeld a modell tanításhoz használt iterációinak számát egy kis számmal (pl. 5-tel), csökkentsd a kiinduló tanulási rátát (learning rate) egy nagyságrenddel, és állíts be *warm startot*. Ez utóbbi fogja biztosítani, hogy a modellt tovább tanítja, és nem új tanítást kezd.
+    4. Növeld a modell tanításhoz használt iterációinak számát egy kis számmal (pl. 5-tel), csökkentsd a kiinduló tanulási rátát (learning rate) egy nagyságrenddel, és állíts be _warm startot_. Ez utóbbi fogja biztosítani, hogy a modellt tovább tanítja, és nem új tanítást kezd.
     5. Tanítsd a modellt az összefűzött adatokkal, de adj meg `0.7`-es súlyértéket az eredeti tanító adatok soraira, és `1.0`-ás súlyértéket a finomhangoló sorokra. Ezt a `fit()` függvény `sample_weight` paraméterével lehet szabályozni. Minden sorhoz 1 értéket kell megadni.
     6. A korábbiakhoz hasonlóan a tanítást kövesd nyomon az MLflow segítségével, és a folyamat végén konvertáld ONNX formátumba, majd logold a modellt.
     7. A kapott modell működését ellenőrizd a tesztadatok segítségével. Ha a tesztadatokon továbbra is 90% feletti pontosságot ér el a modell, regisztráld az eredeti és az ONNX-változatot, mint új verziót.
-   
+
 4. Futtass egy [Prefect Server Docker konténert](https://hub.docker.com/r/prefecthq/prefect). Ehhez vedd fel a `docker-compose.yaml` fájlba ennek konfigurációját.
 5. Készíts Prefect pipeline-t a finomhangoló logikából.
 
@@ -987,7 +1100,7 @@ A Prefect tipikusan konténerizált komponensekből áll, és mindegyik külön-
     3. A pipeline paraméterül kapja meg a 4 inputot és az elvárt osztálynevet.
     4. A paramétereket fűzze hozzá a `finetune.csv` végére. Amennyiben a finomhangoló adatok száma elér egy bizonyos mennyiséget (pl. 5 darab), indítsuk el a finomhangoló logikát. Ezután megint csak akkor finomhangolunk, ha újabb 5 adat érkezik (ekkor már 10 adattal).
     5. Teszteld a kód működését. A pipeline-t a Prefect UI felületéről lehet manuálisan elindítani.
-   
+
 6. Csomagold be a finomhangoló kódot egy [feladatspecifikus worker konténerbe](https://docs.prefect.io/v3/how-to-guides/deployment_infra/serve-flows-docker).
 
     1. Hozd létre a szükséges `requirements.txt` és `Dockerfile` fájlokat. Itt nagyon hasonlóan kell eljárnod, mint az API esetén.
@@ -995,7 +1108,7 @@ A Prefect tipikusan konténerizált komponensekből áll, és mindegyik külön-
     3. Ne felejtsd el beállítani a környezeti változókat a többi szolgáltatásra. Szükség lesz egy `PREFECT_API_URL`-re és egy `MLFLOW_URL`-re. Az utóbbit neked kell majd kézzel feldolgozni és beállítani az `mlflow.set_tracking_uri(...)` utasításban. A környezeti változót az `os.environ.get(...)` utasítással lehet lekérni.
     4. A szolgáltatásnak fel kell majd venned egy `volume`-ot is. A volume lényegében egy olyan mappa, amit elérhetővé teszel a konténernek a konténeren kívülről. Ilyen lehet például a `data` mappa, ahol tárolod majd a `finetune.csv` fájlt. Így a futtatások között ennek értéke állandó lesz.
     5. Teszteld a konténer működését.
-   
+
 7. Hozz létre egy új végpontot az API-n, ahol 4 *double* és 1 *string* paramétert várunk.
 
     1. Készítsd el a végponthoz szükséges modell osztályokat (pl. `SuggestInput`).
@@ -1003,7 +1116,7 @@ A Prefect tipikusan konténerizált komponensekből áll, és mindegyik külön-
     3. A trigger elkészítéséhez vedd fel a Prefect Server elérési útját a `Settings`-be, és add meg az értékét a `docker-compose.yaml`-ben.
     4. Derítsd ki a pipeline azonosítóját (ezt ugyan lehet manuálisan is, de célszerű automatizáltan csinálni). Ehhez használd a [`/api/deployments/name/{flow-name}`](https://docs.prefect.io/v3/api-ref/rest-api/server/deployments/read-deployment-by-name) végpontot.
     5. Indítsd el a folyamatot a megfelelő paraméterek átadásával, a [`/api/deployments/{deployment_id}/create_flow_run`](https://docs.prefect.io/v3/api-ref/rest-api/server/deployments/create-flow-run-from-deployment) végpont segítségével.
-   
+
 8. Módosítsd az API kódját úgy, hogy új modellverzió esetén automatikusan az új modellt használja.
 
     1. A modellek aktuális verzióit az `MLFlowClient` osztály `search_model_versions` metódusával lehet lekérni.
@@ -1014,11 +1127,11 @@ A Prefect tipikusan konténerizált komponensekből áll, és mindegyik külön-
 ### Beadandó
 
 !!! example "Opcionális feladat beadandó (10 pont)"
-    * Commitold a változtatásokat.  
-    * Készíts egy képernyőképet a Prefect UI felületéről, ahol látszik, hogy lefutott egy finomhangoló pipeline, és mentsd el **`fo.png`** néven a repository gyökerébe.
+    - Commitold a változtatásokat.  
+    - Készíts egy képernyőképet a Prefect UI felületéről, ahol látszik, hogy lefutott egy finomhangoló pipeline, és mentsd el **`fo.png`** néven a repository gyökerébe.
 
     Ezen felül, amennyiben használtál valamilyen AI-eszközt a feladat megoldásához, mellékelj **promptnaplót**:
 
-    * A napló tartalmazza szöveges formátumban a feltett kérdéseket és az arra kapott válaszokat,
-    * Szerepeljen benne az is, hogy melyik modellt kérdezted, és mikor (dátum elég, időpont nem kell),
-    * A promptnaplót mentsd el a projekt gyökerébe `prompts.log` néven, és **commitold**.
+    - A napló tartalmazza szöveges formátumban a feltett kérdéseket és az arra kapott válaszokat,
+    - Szerepeljen benne az is, hogy melyik modellt kérdezted, és mikor (dátum elég, időpont nem kell),
+    - A promptnaplót mentsd el a projekt gyökerébe `prompts.log` néven, és **commitold**.

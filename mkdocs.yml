@@ -32,6 +32,8 @@ theme:
     - navigation.instant
     - navigation.top
     - search.suggest
+    - content.tabs.link
+    - content.code.copy
   logo: logo-bme-aut.png
   favicon: favicon.ico
 
@@ -60,7 +62,8 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tilde
   - md_in_html
   - pymdownx.keys
