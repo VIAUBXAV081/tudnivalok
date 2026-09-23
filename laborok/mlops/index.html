@@ -13,8 +13,12 @@
       
         <link rel="next" href="../rl/">
       
+      
+        
+      
+      
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -22,14 +26,17 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -45,11 +52,10 @@
     
       <link rel="stylesheet" href="../../extra-material-theme.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
@@ -74,9 +80,6 @@
     
     <body dir="ltr" data-md-color-scheme="aut" data-md-color-primary="red" data-md-color-accent="red">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -104,7 +107,8 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -123,44 +127,59 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="aut" data-md-color-primary="red" data-md-color-accent="red" aria-label="Váltás sötét témára" type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Váltás sötét témára" for="__palette_2" hidden="">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"></path></svg>
-            </label>
-          
-        
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="" aria-label="Váltás világos témára" type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Váltás világos témára" for="__palette_1" hidden="">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"></path></svg>
-            </label>
-          
-        
-      </form>
+      
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="aut" data-md-color-primary="red" data-md-color-accent="red" aria-label="Váltás sötét témára" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Váltás sötét témára" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"></path></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="indigo" aria-label="Váltás világos témára" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Váltás világos témára" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Keresés" placeholder="Keresés" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Keresés">
         
         <button type="reset" class="md-search__icon md-icon" title="Törlés" aria-label="Törlés" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -168,7 +187,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix="">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Keresés inicializálása
@@ -179,13 +198,14 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/viaubxav081/tudnivalok" title="Főoldalra ugrás" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     viaubxav081/tudnivalok
@@ -210,50 +230,62 @@
         
   
   
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Tudnivalók
 
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        Tudnivalók
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
         
+  
   
   
     
   
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Laborok
 
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
-        Laborok
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
         
   
   
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../demok/ai-service/" class="md-tabs__link">
+          
+  
+  
+  Demók
 
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../demok/ai-service/" class="md-tabs__link">
-        Demók
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -273,6 +305,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 
@@ -290,7 +323,7 @@
       <a href="https://github.com/viaubxav081/tudnivalok" title="Főoldalra ugrás" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
   </div>
   <div class="md-source__repository">
     viaubxav081/tudnivalok
@@ -302,145 +335,262 @@
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
+      
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
-      
-      
-      
-        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
-          Tudnivalók
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_1">
-          <span class="md-nav__icon md-icon"></span>
-          Tudnivalók
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
+        
           
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tudnivalók
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tudnivalók
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Tárgy ismertető
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tárgy ismertető
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../github/GitHub/" class="md-nav__link">
-        Feladatok beadása (GitHub)
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feladatok beadása (GitHub)
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../github/GitHub-Actions/" class="md-nav__link">
-        GitHub Actions ismertető
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions ismertető
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../../github/GitHub-credentials/" class="md-nav__link">
-        Egyetemi laborokban: GitHub belépés
+      <a href="../../github/GitHub-credentials.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../github/contributing/" class="md-nav__link">
-        Hozzájárulás az anyaghoz
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hozzájárulás az anyaghoz
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+  
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+    
+      
+        
+        
       
       
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          Laborok
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Laborok
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
           
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laborok
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Laborok
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -452,12 +602,38 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          MLOps Labor
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLOps Labor
+  
+
+    
+  </span>
+  
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        MLOps Labor
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLOps Labor
+  
+
+    
+  </span>
+  
+  
+
       </a>
       
         
@@ -477,7 +653,11 @@
       
         <li class="md-nav__item">
   <a href="#elokeszulet" class="md-nav__link">
-    Előkészület
+    <span class="md-ellipsis">
+      
+        Előkészület
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Előkészület">
@@ -485,21 +665,33 @@
         
           <li class="md-nav__item">
   <a href="#git-repository-letrehozasa-es-letoltese" class="md-nav__link">
-    Git repository létrehozása és letöltése
+    <span class="md-ellipsis">
+      
+        Git repository létrehozása és letöltése
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#virtualis-kornyezet-letrehozasa" class="md-nav__link">
-    Virtuális környezet létrehozása
+    <span class="md-ellipsis">
+      
+        Virtuális környezet létrehozása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#az-elkeszitendo-pipeline" class="md-nav__link">
-    Az elkészítendő pipeline
+    <span class="md-ellipsis">
+      
+        Az elkészítendő pipeline
+      
+    </span>
   </a>
   
 </li>
@@ -511,14 +703,22 @@
       
         <li class="md-nav__item">
   <a href="#kiindulo-projekt-felepitese" class="md-nav__link">
-    Kiinduló projekt felépítése
+    <span class="md-ellipsis">
+      
+        Kiinduló projekt felépítése
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#1-feladat-adatok-elofeldolgozasa-es-verziozasa" class="md-nav__link">
-    1. feladat: Adatok előfeldolgozása és verziózása
+    <span class="md-ellipsis">
+      
+        1. feladat: Adatok előfeldolgozása és verziózása
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="1. feladat: Adatok előfeldolgozása és verziózása">
@@ -526,28 +726,44 @@
         
           <li class="md-nav__item">
   <a href="#dvc-inicializalasa" class="md-nav__link">
-    DVC inicializálása
+    <span class="md-ellipsis">
+      
+        DVC inicializálása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#adatok-beszerzese" class="md-nav__link">
-    Adatok beszerzése
+    <span class="md-ellipsis">
+      
+        Adatok beszerzése
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#adatok-elofeldolgozasa" class="md-nav__link">
-    Adatok előfeldolgozása
+    <span class="md-ellipsis">
+      
+        Adatok előfeldolgozása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#beadando" class="md-nav__link">
-    Beadandó
+    <span class="md-ellipsis">
+      
+        Beadandó
+      
+    </span>
   </a>
   
 </li>
@@ -559,7 +775,11 @@
       
         <li class="md-nav__item">
   <a href="#2-feladat-osztalyozo-modell-elkeszitese" class="md-nav__link">
-    2. feladat: Osztályozó modell elkészítése
+    <span class="md-ellipsis">
+      
+        2. feladat: Osztályozó modell elkészítése
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="2. feladat: Osztályozó modell elkészítése">
@@ -567,35 +787,55 @@
         
           <li class="md-nav__item">
   <a href="#modell-keszites" class="md-nav__link">
-    Modell készítés
+    <span class="md-ellipsis">
+      
+        Modell készítés
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#modell-optimalizalasa" class="md-nav__link">
-    Modell optimalizálása
+    <span class="md-ellipsis">
+      
+        Modell optimalizálása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#modell-exportalasa" class="md-nav__link">
-    Modell exportálása
+    <span class="md-ellipsis">
+      
+        Modell exportálása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#modell-verziokezelese" class="md-nav__link">
-    Modell verziókezelése
+    <span class="md-ellipsis">
+      
+        Modell verziókezelése
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#beadando_1" class="md-nav__link">
-    Beadandó
+    <span class="md-ellipsis">
+      
+        Beadandó
+      
+    </span>
   </a>
   
 </li>
@@ -607,7 +847,11 @@
       
         <li class="md-nav__item">
   <a href="#3-feladat-modell-uzembe-helyezese-es-futtatasa" class="md-nav__link">
-    3. feladat: Modell üzembe helyezése és futtatása
+    <span class="md-ellipsis">
+      
+        3. feladat: Modell üzembe helyezése és futtatása
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="3. feladat: Modell üzembe helyezése és futtatása">
@@ -615,28 +859,44 @@
         
           <li class="md-nav__item">
   <a href="#api-keszitese" class="md-nav__link">
-    API készítése
+    <span class="md-ellipsis">
+      
+        API készítése
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#kontener-letrehozasa" class="md-nav__link">
-    Konténer létrehozása
+    <span class="md-ellipsis">
+      
+        Konténer létrehozása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#kontener-futtatasa" class="md-nav__link">
-    Konténer futtatása
+    <span class="md-ellipsis">
+      
+        Konténer futtatása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#beadando_2" class="md-nav__link">
-    Beadandó
+    <span class="md-ellipsis">
+      
+        Beadandó
+      
+    </span>
   </a>
   
 </li>
@@ -648,7 +908,11 @@
       
         <li class="md-nav__item">
   <a href="#4-feladat-api-monitorozasa" class="md-nav__link">
-    4. feladat: API monitorozása
+    <span class="md-ellipsis">
+      
+        4. feladat: API monitorozása
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="4. feladat: API monitorozása">
@@ -656,28 +920,44 @@
         
           <li class="md-nav__item">
   <a href="#api-metrikak-publikalasa" class="md-nav__link">
-    API metrikák publikálása
+    <span class="md-ellipsis">
+      
+        API metrikák publikálása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#prometheus-konfiguralasa" class="md-nav__link">
-    Prometheus konfigurálása
+    <span class="md-ellipsis">
+      
+        Prometheus konfigurálása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#grafana-beallitasa" class="md-nav__link">
-    Grafana beállítása
+    <span class="md-ellipsis">
+      
+        Grafana beállítása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#beadando_3" class="md-nav__link">
-    Beadandó
+    <span class="md-ellipsis">
+      
+        Beadandó
+      
+    </span>
   </a>
   
 </li>
@@ -689,7 +969,11 @@
       
         <li class="md-nav__item">
   <a href="#opcionalis-feladat" class="md-nav__link">
-    Opcionális feladat
+    <span class="md-ellipsis">
+      
+        Opcionális feladat
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Opcionális feladat">
@@ -697,21 +981,33 @@
         
           <li class="md-nav__item">
   <a href="#prefect" class="md-nav__link">
-    Prefect
+    <span class="md-ellipsis">
+      
+        Prefect
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#megoldas-menete" class="md-nav__link">
-    Megoldás menete
+    <span class="md-ellipsis">
+      
+        Megoldás menete
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#beadando_4" class="md-nav__link">
-    Beadandó
+    <span class="md-ellipsis">
+      
+        Beadandó
+      
+    </span>
   </a>
   
 </li>
@@ -728,129 +1024,236 @@
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../rl/" class="md-nav__link">
-        RL Labor
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RL Labor
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../cv/" class="md-nav__link">
-        Gépi látás labor
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gépi látás labor
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../fullstack/" class="md-nav__link">
-        FullStack Labor
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FullStack Labor
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../android/" class="md-nav__link">
-        Android labor
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android labor
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
+      
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          Demók
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Demók
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix="">
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
           
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demók
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Demók
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../demok/ai-service/" class="md-nav__link">
-        Egyszerű AI szolgáltatás
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Egyszerű AI szolgáltatás
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../demok/fullstack/" class="md-nav__link">
-        Fullstack Blog alkalmazás
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fullstack Blog alkalmazás
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -883,7 +1286,11 @@
       
         <li class="md-nav__item">
   <a href="#elokeszulet" class="md-nav__link">
-    Előkészület
+    <span class="md-ellipsis">
+      
+        Előkészület
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Előkészület">
@@ -891,21 +1298,33 @@
         
           <li class="md-nav__item">
   <a href="#git-repository-letrehozasa-es-letoltese" class="md-nav__link">
-    Git repository létrehozása és letöltése
+    <span class="md-ellipsis">
+      
+        Git repository létrehozása és letöltése
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#virtualis-kornyezet-letrehozasa" class="md-nav__link">
-    Virtuális környezet létrehozása
+    <span class="md-ellipsis">
+      
+        Virtuális környezet létrehozása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#az-elkeszitendo-pipeline" class="md-nav__link">
-    Az elkészítendő pipeline
+    <span class="md-ellipsis">
+      
+        Az elkészítendő pipeline
+      
+    </span>
   </a>
   
 </li>
@@ -917,14 +1336,22 @@
       
         <li class="md-nav__item">
   <a href="#kiindulo-projekt-felepitese" class="md-nav__link">
-    Kiinduló projekt felépítése
+    <span class="md-ellipsis">
+      
+        Kiinduló projekt felépítése
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#1-feladat-adatok-elofeldolgozasa-es-verziozasa" class="md-nav__link">
-    1. feladat: Adatok előfeldolgozása és verziózása
+    <span class="md-ellipsis">
+      
+        1. feladat: Adatok előfeldolgozása és verziózása
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="1. feladat: Adatok előfeldolgozása és verziózása">
@@ -932,28 +1359,44 @@
         
           <li class="md-nav__item">
   <a href="#dvc-inicializalasa" class="md-nav__link">
-    DVC inicializálása
+    <span class="md-ellipsis">
+      
+        DVC inicializálása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#adatok-beszerzese" class="md-nav__link">
-    Adatok beszerzése
+    <span class="md-ellipsis">
+      
+        Adatok beszerzése
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#adatok-elofeldolgozasa" class="md-nav__link">
-    Adatok előfeldolgozása
+    <span class="md-ellipsis">
+      
+        Adatok előfeldolgozása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#beadando" class="md-nav__link">
-    Beadandó
+    <span class="md-ellipsis">
+      
+        Beadandó
+      
+    </span>
   </a>
   
 </li>
@@ -965,7 +1408,11 @@
       
         <li class="md-nav__item">
   <a href="#2-feladat-osztalyozo-modell-elkeszitese" class="md-nav__link">
-    2. feladat: Osztályozó modell elkészítése
+    <span class="md-ellipsis">
+      
+        2. feladat: Osztályozó modell elkészítése
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="2. feladat: Osztályozó modell elkészítése">
@@ -973,35 +1420,55 @@
         
           <li class="md-nav__item">
   <a href="#modell-keszites" class="md-nav__link">
-    Modell készítés
+    <span class="md-ellipsis">
+      
+        Modell készítés
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#modell-optimalizalasa" class="md-nav__link">
-    Modell optimalizálása
+    <span class="md-ellipsis">
+      
+        Modell optimalizálása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#modell-exportalasa" class="md-nav__link">
-    Modell exportálása
+    <span class="md-ellipsis">
+      
+        Modell exportálása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#modell-verziokezelese" class="md-nav__link">
-    Modell verziókezelése
+    <span class="md-ellipsis">
+      
+        Modell verziókezelése
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#beadando_1" class="md-nav__link">
-    Beadandó
+    <span class="md-ellipsis">
+      
+        Beadandó
+      
+    </span>
   </a>
   
 </li>
@@ -1013,7 +1480,11 @@
       
         <li class="md-nav__item">
   <a href="#3-feladat-modell-uzembe-helyezese-es-futtatasa" class="md-nav__link">
-    3. feladat: Modell üzembe helyezése és futtatása
+    <span class="md-ellipsis">
+      
+        3. feladat: Modell üzembe helyezése és futtatása
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="3. feladat: Modell üzembe helyezése és futtatása">
@@ -1021,28 +1492,44 @@
         
           <li class="md-nav__item">
   <a href="#api-keszitese" class="md-nav__link">
-    API készítése
+    <span class="md-ellipsis">
+      
+        API készítése
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#kontener-letrehozasa" class="md-nav__link">
-    Konténer létrehozása
+    <span class="md-ellipsis">
+      
+        Konténer létrehozása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#kontener-futtatasa" class="md-nav__link">
-    Konténer futtatása
+    <span class="md-ellipsis">
+      
+        Konténer futtatása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#beadando_2" class="md-nav__link">
-    Beadandó
+    <span class="md-ellipsis">
+      
+        Beadandó
+      
+    </span>
   </a>
   
 </li>
@@ -1054,7 +1541,11 @@
       
         <li class="md-nav__item">
   <a href="#4-feladat-api-monitorozasa" class="md-nav__link">
-    4. feladat: API monitorozása
+    <span class="md-ellipsis">
+      
+        4. feladat: API monitorozása
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="4. feladat: API monitorozása">
@@ -1062,28 +1553,44 @@
         
           <li class="md-nav__item">
   <a href="#api-metrikak-publikalasa" class="md-nav__link">
-    API metrikák publikálása
+    <span class="md-ellipsis">
+      
+        API metrikák publikálása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#prometheus-konfiguralasa" class="md-nav__link">
-    Prometheus konfigurálása
+    <span class="md-ellipsis">
+      
+        Prometheus konfigurálása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#grafana-beallitasa" class="md-nav__link">
-    Grafana beállítása
+    <span class="md-ellipsis">
+      
+        Grafana beállítása
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#beadando_3" class="md-nav__link">
-    Beadandó
+    <span class="md-ellipsis">
+      
+        Beadandó
+      
+    </span>
   </a>
   
 </li>
@@ -1095,7 +1602,11 @@
       
         <li class="md-nav__item">
   <a href="#opcionalis-feladat" class="md-nav__link">
-    Opcionális feladat
+    <span class="md-ellipsis">
+      
+        Opcionális feladat
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Opcionális feladat">
@@ -1103,21 +1614,33 @@
         
           <li class="md-nav__item">
   <a href="#prefect" class="md-nav__link">
-    Prefect
+    <span class="md-ellipsis">
+      
+        Prefect
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#megoldas-menete" class="md-nav__link">
-    Megoldás menete
+    <span class="md-ellipsis">
+      
+        Megoldás menete
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#beadando_4" class="md-nav__link">
-    Beadandó
+    <span class="md-ellipsis">
+      
+        Beadandó
+      
+    </span>
   </a>
   
 </li>
@@ -1137,9 +1660,11 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+
 
   
   
@@ -1148,13 +1673,13 @@
 <h1 id="mlops-labor">MLOps Labor<a class="headerlink" href="#mlops-labor" title="Permanent link">¶</a></h1>
 <p>A labor során önállóan fogsz elkészíteni egy egyszerű osztályozó modellt, illetve a hozzá tartozó MLOps pipeline-t. A labor célja, hogy tapasztalatot szerezz az MLOps gyakorlati alkalmazásában.</p>
 <h2 id="elokeszulet">Előkészület<a class="headerlink" href="#elokeszulet" title="Permanent link">¶</a></h2>
-<p>A feladatok megoldásához az alábbi telepített szoftverekre van szükség (alternatívaként használhatjuk a <a href="https://cloud.bme.hu/">BME Cloud</a> egyik virtuális gépét):</p>
+<p>A feladatok megoldásához az alábbi telepített szoftverekre van szükség (alternatívaként használhatjuk a <a href="https://cloud.bme.hu/">BME Cloud</a> egyik virtuális gépét, előkészített image-ért keresd a labor felelősét):</p>
 <ul>
 <li><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a> vagy egyéb Docker-konténer futtatására alkalmas környezet</li>
 <li><a href="https://www.python.org/">Python</a> futtatókörnyezet (3.12-es verzió)</li>
 <li><a href="https://code.visualstudio.com/">VS Code</a> vagy egyéb kódszerkesztő</li>
 <li><a href="https://git-scm.com/">Git</a></li>
-<li><a href="https://python-poetry.org/">Poetry</a> vagy egyéb függőségkezelő (opcionális, de erősen javasolt)</li>
+<li><a href="https://docs.astral.sh/uv/">uv</a>, <a href="https://python-poetry.org/">Poetry</a> vagy egyéb függőségkezelő (opcionális, de erősen javasolt)</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Technológiák</p>
@@ -1172,25 +1697,68 @@
 <p>Már most érdemes létrehozni egy virtuális környezetet a projekt gyökerében, és azt aktiválni. A virtuális környezet célja, hogy a Python csomagokat, amiket használni fogsz, ne globálisan kelljen feltelepíteni, hanem csak az adott projektre vonatkozóan. Így nem fog problémát okozni az, hogy ebben a projektben az egyik csomagból az egyik verziót használod, míg egy másikban ugyanabból a csomagból egy másikat.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tipp</p>
-<p>A virtuális környezet létrehozásához az alábbi leírás a <code>poetry</code>-t javasolja. Ettől saját felelősségre el lehet térni, de erősen    ajánlott ennek használata. Ha elakadnátok, bátran kérjetek segítséget.</p>
+<p>A virtuális környezet létrehozásához az alábbi leírás az <code>uv</code>-t vagy a <code>poetry</code>-t javasolja. Ettől saját felelősségre el lehet térni, de erősen ajánlott ennek használata. Ha elakadnátok, bátran kérjetek segítséget.</p>
 </div>
 <ol>
 <li>
-<p>Nyiss meg egy parancssort a projekt gyökerében, és add ki a <code>poetry install</code> parancsot. Ez létrehozza az előre konfigurált virtuális környezetet a <code>.venv</code> mappában.</p>
-</li>
-<li>
-<p>A környezet aktiválásához a <code>.\.venv\Scripts\activate</code> parancsot kell futtatni.</p>
+<p>Nyiss meg egy parancssort a projekt gyökerében, és hozd létre az előre konfigurált virtuális környezetet a <code>.venv</code> mappában.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">uv</label><label for="__tabbed_1_2">Poetry</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">sync</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">poetry</span> <span class="n">install</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <div class="admonition note">
-<p class="admonition-title">Megjegyzés</p>
-<p>A parancssoros környezettől függően ez eltérő lehet, tájékozódjunk az opciókról a <a href="https://python-poetry.org/docs/managing-environments/#activating-the-environment">dokumentációban</a>. Az útmutató példái Windows-on PowerShell használatára építenek, ezeket az utasításokat mindig a projekt gyökerében kell kiadni. Ha a <code>PS&gt;</code> előtagot látjátok, az a parancssorra utal, ezt nem kell beírni.</p>
+<p class="admonition-title">Windows, Linux és macOS</p>
+<p>Az útmutató példái elsősorban <strong>Windows + PowerShell</strong> környezetben lettek tesztelve. Azokat a lépéseket, ahol a Windows, Linux és macOS használata között eltérés van, külön jelezzük az adott platformhoz tartozó alternatív parancsokkal. Az utasításokat mindig a <strong>projekt gyökerében</strong> kell végrehajtani.</p>
 </div>
 </li>
 <li>
-<p>Sikeres aktiváció után a parancssorban megjelenik a virtuális környezet neve a sor elején (pl.: <code>(lab03-mlops-py3.12) PS ... &gt;</code>)</p>
+<p>Aktiváld a virtuális környezetet.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Windows + PowerShell</label><label for="__tabbed_2_2">Linux / macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">.\.</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Megjegyzés</p>
+<p>A csomagkezelők használata esetén a virtuális környezet aktiválása alapesetben nem szükséges. A parancsok közvetlenül is futtathatók a <code>run</code> segítségével. Ebben az esetben azonban minden parancs elé ki kell írni a megfelelő előtagot.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">uv</label><label for="__tabbed_3_2">Poetry</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">run</span> <span class="n">python</span> <span class="n">main</span><span class="p">.</span><span class="n">py</span>
+<span class="n">uv</span> <span class="n">run</span> <span class="n">dvc</span> <span class="n">init</span>
+<span class="c"># ... stb</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">poetry</span> <span class="n">run</span> <span class="n">python</span> <span class="n">main</span><span class="p">.</span><span class="n">py</span>
+<span class="n">poetry</span> <span class="n">run</span> <span class="n">dvc</span> <span class="n">init</span>
+<span class="c"># ... stb</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Az útmutatóban az egyszerűség kedvéért ezért a virtuális környezet <strong>aktiválását preferáljuk</strong> inkább.</p>
+</div>
 </li>
 <li>
-<p>Ezután minden parancsot ebben a parancssorban adjunk ki, különben egyes komponenseket lehet, hogy nem fog megtalálni a rendszer.</p>
+<p>Sikeres aktiváció után a parancssorban megjelenik a virtuális környezet neve a sor elején (pl.: <code>(lab01-mlops-py3.12) PS ... &gt;</code>)</p>
 </li>
+<li>Ezután minden parancsot ebben a parancssorban adjunk ki, különben egyes komponenseket lehet, hogy nem fog megtalálni a rendszer.</li>
 </ol>
 <h3 id="az-elkeszitendo-pipeline">Az elkészítendő pipeline<a class="headerlink" href="#az-elkeszitendo-pipeline" title="Permanent link">¶</a></h3>
 <p>A labor során egy egyszerű osztályozó modellt kell készítened. Az egyszerűség kedvéért készítsünk egy Iris osztályozót. A modell bemenetként 4 db számot fog megkapni (a szirom- és csészelevél szélessége és hosszúsága), és a modellnek meg kell mondania, hogy a 3 osztály közül (Iris-setosa, Iris-virginica és Iris-versicolor) melyikhez tartozik.</p>
@@ -1213,7 +1781,7 @@
 <li><code>data</code> és <code>models</code> mappa: Adatokat és modelleket tartalmazó mappa, ezek tartalmát többnyire nem commitoljuk.</li>
 <li><code>docker-compose.yaml</code>: A Docker-konténerek egyszerű indításához és összekapcsolásához szükséges leíró fájl.</li>
 <li><code>main.py</code>: A projekt elsődleges belépési pontja.</li>
-<li><code>poetry.lock</code>, <code>poetry.toml</code>, <code>pyproject.toml</code>: A projekt és csomagkezelő konfigurációs fájljai, itt találjuk majd a függőségeket. Kézzel nem kell őket módosítani.</li>
+<li><code>uv.lock</code> / <code>poetry.lock</code>, <code>poetry.toml</code>, <code>pyproject.toml</code>: A projekt és csomagkezelő konfigurációs fájljai, itt találjuk majd a függőségeket. Kézzel nem kell őket módosítani.</li>
 <li><code>prometheus.yml</code>: A monitorozó eszköz konfigurációs fájlja.</li>
 </ul>
 <p>A virtuális környezet létrehozása után találkozni fogunk még a <code>.poetry</code> és a <code>.venv</code> mappákkal is:</p>
@@ -1225,9 +1793,25 @@
 <h3 id="dvc-inicializalasa">DVC inicializálása<a class="headerlink" href="#dvc-inicializalasa" title="Permanent link">¶</a></h3>
 <p>Szoftverek fejlesztése során a forráskód verziókezelésére fektetjük általában a legnagyobb hangsúlyt. MI-alkalmazások fejlesztése során azonban az adat is hasonló fontossággal bír, melynek verziókezelése nagyobb kihívással jár. Ennek oka elsősorban az, hogy a hagyományos verziókezelők kis méretű szöveges fájlokra optimalizáltak. Az adatok verziókezelésére egy remek eszköz a <a href="https://dvc.org/doc/start">DVC</a>, ami a gittel összehangolva működik. Elve, hogy az adatfájlokra mutató leíró fájlokat hoz létre a repository-ban, melyeket hagyományosan tudunk verziózni. A leíró fájlok alapján a DVC azonosítani tudja az adat megfelelő verzióját, és azt egy külön tárból tudja betölteni. A DVC előnye, hogy a hasonló Git LFS-hez képest rugalmasabban konfigurálható, hogy milyen tárat választunk az adatoknak.</p>
 <ol>
-<li>Telepítsd az eszközt a <code>poetry add dvc</code> paranccsal.</li>
-<li>Inicializáld a projektet a <code>dvc init</code> parancs segítségével. Ez létrehoz egy <code>.dvc</code> mappát, amit majd fontos lesz commitolni is, hisz ez tartalmazza majd az adatfájlok tényleges elérési útvonalát.</li>
-<li>A <code>dvc remote add -d myremote C:\Users....</code> parancs segítségével állíts be egy tetszőleges lokális mappát az adatok tárának. Olyan mappát válasszunk, ami a projekt mappáján kívül helyezkedik el. A parancsban a <code>myremote</code> név tetszőlegesen változtatható.</li>
+<li>
+<p>Telepítsd fel a DVC eszközt.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">uv</label><label for="__tabbed_4_2">Poetry</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">add</span> <span class="n">dvc</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">poetry</span> <span class="n">add</span> <span class="n">dvc</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Inicializáld a projektet a <code>dvc init</code> parancs segítségével. Ez létrehoz egy <code>.dvc</code> mappát, amit majd fontos lesz commitolni is, hisz ez tartalmazza majd az adatfájlok tényleges elérési útvonalát.</p>
+</li>
+<li>A <code>dvc remote add -d myremote &lt;útvonal&gt;</code> parancs segítségével állíts be egy tetszőleges lokális mappát az adatok tárának (pl. Windows esetén <code>C:\Users\...</code>, Linux/macOS esetén <code>/home/felhasznalo/...</code>). Olyan mappát válasszunk, ami a projekt mappáján kívül helyezkedik el. A parancsban a <code>myremote</code> név tetszőlegesen változtatható.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
@@ -1275,14 +1859,26 @@
 <p>Mielőtt felhasználnád az adatokat, szükség van előfeldolgozásra. A DVC egy nagyon hasznos funkciója, a data pipeline-ok létrehozása. Ennek segítségével létre tudunk hozni egy automatikus előfeldolgozó folyamatot. Ennek a folyamatnak meg tudunk adni függőségeket és kimeneteket, és csak akkor fog lefutni, ha a függőségek közül valami módosult, vagy ha a kimenetek közül valamelyik nem létezik. A kimeneti fájlok automatikusan bekerülnek a verziókövetett fájlok közé, ezeket nem kell hozzáadni manuálisan. A pipeline leírása a <code>dvc.yaml</code> fájlba kerül, a verziókövetett fájlok pedig a <code>dvc.lock</code> fájlba.</p>
 <ol>
 <li>
-<p>Telepítsd a <code>pandas</code> és <code>scikit-learn</code> csomagokat a <code>poetry add pandas scikit-learn</code> paranccsal.</p>
+<p>Telepítsd a <code>pandas</code> és <code>scikit-learn</code> csomagokat.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">uv</label><label for="__tabbed_5_2">Poetry</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">add</span> <span class="n">pandas</span> <span class="n">scikit-learn</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">poetry</span> <span class="n">add</span> <span class="n">pandas</span> <span class="n">scikit-learn</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </li>
 <li>
 <p>Hozz létre egy <code>preprocess.py</code> fájlt a projekt gyökerébe, ebbe a fájlba készül el az előfeldolgozó script:</p>
 <ol>
 <li>
 <p>Érdemes a scriptet egy <code>main</code> utasításba csomagolni, amit a fájl végén található elágazásban hívunk meg. Így biztosítható, hogy a kód csak akkor fusson le automatikusan, ha közvetlenül indítjuk a fájlt, és ne akkor, amikor más modul importálja azt. Ez átláthatóbbá és újrahasznosíthatóbbá teszi a programot.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
     <span class="c1"># Ide kerül az előfeldolgozó logika</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
@@ -1291,7 +1887,7 @@
 </li>
 <li>
 <p>Töltsd be az adatkészletet <code>pandas</code> segítségével, és bontsd szét oszlopok szerint bemenő és kimenő tulajdonságokra.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="n">data_path</span> <span class="o">=</span> <span class="s2">"data/data.csv"</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
@@ -1305,7 +1901,7 @@
 </li>
 <li>
 <p>Cseréld ki az osztályneveket indexekre 0–2 között, ehhez használhatod a <code>scikit-learn</code> csomag <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html"><code>LabelEncoder</code></a> osztályát.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">LabelEncoder</span>
 
 <span class="n">label_encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
 <span class="n">y_encoded</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
@@ -1313,7 +1909,7 @@
 </li>
 <li>
 <p>Válaszd szét az adatkészletet véletlenszerűen tanító- és tesztadatokra 80:20 arányban.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
 
 <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_encoded</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">test_size</span><span class="p">)</span>
@@ -1346,7 +1942,10 @@
 <li>A <code>-o</code> kapcsolóval pedig a kimeneteket adjuk meg,</li>
 <li>A további argumentumok a lépés futtatásának módját írják le.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="n">dvc</span> <span class="n">stage</span> <span class="n">add</span> <span class="n">-n</span> <span class="n">preprocess</span> <span class="p">`</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Windows + PowerShell</label><label for="__tabbed_6_2">Linux / macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">dvc</span> <span class="n">stage</span> <span class="n">add</span> <span class="n">-n</span> <span class="n">preprocess</span> <span class="p">`</span>
             <span class="n">-d</span> <span class="n">preprocess</span><span class="p">.</span><span class="n">py</span> <span class="p">`</span>
             <span class="n">-d</span> <span class="n">data</span><span class="p">/</span><span class="n">data</span><span class="p">.</span><span class="n">csv</span> <span class="p">`</span>
             <span class="n">-o</span> <span class="n">data</span><span class="p">/</span><span class="n">train</span><span class="p">.</span><span class="n">csv</span> <span class="p">`</span>
@@ -1354,6 +1953,19 @@
             <span class="n">-o</span> <span class="n">data</span><span class="p">/</span><span class="n">classes</span><span class="p">.</span><span class="n">json</span> <span class="p">`</span>
             <span class="n">python</span> <span class="n">preprocess</span><span class="p">.</span><span class="n">py</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>dvc<span class="w"> </span>stage<span class="w"> </span>add<span class="w"> </span>-n<span class="w"> </span>preprocess<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>-d<span class="w"> </span>preprocess.py<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>-d<span class="w"> </span>data/data.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>-o<span class="w"> </span>data/train.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>-o<span class="w"> </span>data/test.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>-o<span class="w"> </span>data/classes.json<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>python<span class="w"> </span>preprocess.py
+</code></pre></div>
+</div>
+</div>
+</div>
 </li>
 <li>
 <p>Futtasd a pipeline-t a <code>dvc repro</code> paranccsal, és ellenőrizd a létrejövő fájlok tartalmát.</p>
@@ -1390,8 +2002,8 @@
 <ol>
 <li>
 <p>Töltsd be a tanító adatokat a korábbi feladathoz hasonlóan. Töltsd be az osztályneveket is, amit később a vizualizációhoz fogunk használni.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 
 <span class="n">train_path</span> <span class="o">=</span> <span class="s1">'data/train.csv'</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">train_path</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
@@ -1409,7 +2021,7 @@
 <p class="admonition-title">Miért 75:25 arányban osztunk?</p>
 <p>Korábban a tanító és teszt adatokat 80:20 arányban osztottuk. Ha ezután a tanító adatokat tovább osztjuk 75:25-re, akkor a végeredmény, hogy a teljes adathalmazra nézve az adatok 60:20:20 arányban vannak felosztva tanító, validáló és teszt adatokra.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
 
 <span class="n">val_size</span> <span class="o">=</span> <span class="mf">0.25</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">val_size</span><span class="p">)</span>
@@ -1417,7 +2029,7 @@
 </li>
 <li>
 <p>Hozd létre a modellt, legyen 3 rejtett rétege 10–10 neuronnal, és 100 epochra állítsd a tanítást.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPClassifier</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neural_network</span><span class="w"> </span><span class="kn">import</span> <span class="n">MLPClassifier</span>
 
 <span class="n">model</span> <span class="o">=</span> <span class="n">MLPClassifier</span><span class="p">(</span>
     <span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
@@ -1440,7 +2052,7 @@
 </li>
 <li>
 <p>Számold ki a pontosságot.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span>
 
 <span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Pontosság: </span><span class="si">{</span><span class="n">accuracy</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
@@ -1448,10 +2060,20 @@
 </li>
 <li>
 <p>Készíts az eredmény alapján konfúziós mátrixot, és jelenítsd meg azt. A megjelenítéshez a <a href="https://matplotlib.org/"><code>matplotlib</code></a> csomagot tudod használni.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="n">poetry</span> <span class="n">add</span> <span class="n">matplotlib</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">uv</label><label for="__tabbed_7_2">Poetry</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">add</span> <span class="n">matplotlib</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">poetry</span> <span class="n">add</span> <span class="n">matplotlib</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
 <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 <span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm</span><span class="p">,</span> <span class="n">display_labels</span><span class="o">=</span><span class="n">class_names</span><span class="p">)</span>
@@ -1465,7 +2087,7 @@
 </li>
 <li>
 <p>Futtasd a modellt és elemezd az eredményeket.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="n">python</span> <span class="n">main</span><span class="p">.</span><span class="n">py</span>
+<div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">main</span><span class="p">.</span><span class="n">py</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Változó eredmények</p>
@@ -1500,8 +2122,8 @@
 </li>
 <li>
 <p>Iterálj végig az értékek kombinációin, és állíts össze egy modellt minden kombinációval. A kombinációk előállításához használd a <code>ParameterGrid</code> segédosztályt.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">ParameterGrid</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">ParameterGrid</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="k">for</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">ParameterGrid</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span>
 
@@ -1513,7 +2135,7 @@
 </li>
 <li>
 <p>Tanítsd be a modelleket, majd számold ki minden egyes modell veszteségét a validációs adatokon.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">log_loss</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">log_loss</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
@@ -1555,8 +2177,8 @@
 </li>
 <li>
 <p>Értékeld ki a legjobban teljesítő modellt a korábbiakhoz hasonlóan.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">best_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
@@ -1582,13 +2204,23 @@
 <ol>
 <li>
 <p>Telepítsd a <a href="https://onnx.ai/sklearn-onnx/index.html"><code>skl2onnx</code></a> csomagot.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="n">poetry</span> <span class="n">add</span> <span class="n">skl2onnx</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">uv</label><label for="__tabbed_8_2">Poetry</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">add</span> <span class="n">skl2onnx</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">poetry</span> <span class="n">add</span> <span class="n">skl2onnx</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </li>
 <li>
 <p>Exportáld a betanított modellt <code>.onnx</code> formátumban a <code>models</code> mappába. Az <code>initial_types</code> paraméter értékének a bemenet típusát és méretét kell megadni.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">skl2onnx</span> <span class="kn">import</span> <span class="n">convert_sklearn</span>
-<span class="kn">from</span> <span class="nn">skl2onnx.common.data_types</span> <span class="kn">import</span> <span class="n">FloatTensorType</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">skl2onnx</span><span class="w"> </span><span class="kn">import</span> <span class="n">convert_sklearn</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">skl2onnx.common.data_types</span><span class="w"> </span><span class="kn">import</span> <span class="n">FloatTensorType</span>
 
 <span class="n">best_onnx</span> <span class="o">=</span> <span class="n">convert_sklearn</span><span class="p">(</span><span class="n">best_model</span><span class="p">,</span> <span class="n">initial_types</span><span class="o">=</span><span class="p">[(</span><span class="s1">'input'</span><span class="p">,</span> <span class="n">FloatTensorType</span><span class="p">([</span><span class="kc">None</span><span class="p">,</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))])</span>
 <span class="n">model_path</span> <span class="o">=</span> <span class="s2">"models/model.onnx"</span>
@@ -1608,31 +2240,41 @@
 <p>Az MLflow használatához lokálisan futtathatunk egy MLflow-példányt, vagy kapcsolódhatunk egy központi szerverhez. Ebben a példában egy köztes megoldást választunk: futtatunk egy MLflow szervert egy Docker-konténerben. Ehhez már minden elő van készítve a <code>docker-compose.yaml</code> fájlban.</p>
 <div class="admonition note">
 <p class="admonition-title">Docker konténerek és a Docker Compose</p>
-<p>A <strong>Docker-konténerek</strong> arra jók, hogy egy alkalmazást minden szükséges függőségével együtt, elkülönített és hordozható környezetben futtassunk. Így a program bárhol ugyanúgy működik, miközben a konténer könnyebb és gyorsabb, mint egy virtuális gép, mert a host operációs rendszer kernelét használja. Több konténer együttes kezelését a <strong>Docker Compose</strong> teszi lehetővé. Egy <em>YAML</em> fájlban leírható a teljes rendszer felépítése, majd egyetlen paranccsal (<code>docker-compose up</code>) az egész környezet egyszerre indítható el. Windows alatt a <strong>Docker Desktop</strong> alkalmazás telepítése szükséges konténerek futtatásához.</p>
+<p>A <strong>Docker-konténerek</strong> arra jók, hogy egy alkalmazást minden szükséges függőségével együtt, elkülönített és hordozható környezetben futtassunk. Így a program bárhol ugyanúgy működik, miközben a konténer könnyebb és gyorsabb, mint egy virtuális gép, mert a host operációs rendszer kernelét használja. Több konténer együttes kezelését a <strong>Docker Compose</strong> teszi lehetővé. Egy <em>YAML</em> fájlban leírható a teljes rendszer felépítése, majd egyetlen paranccsal (<code>docker compose up</code>) az egész környezet egyszerre indítható el. Windows alatt a <strong>Docker Desktop</strong> alkalmazás telepítése szükséges konténerek futtatásához.</p>
 </div>
 <ol>
 <li>
 <p>Futtasd az MLflow UI-t Docker segítségével.</p>
 <ol>
-<li>
-<p>Indítsd el a Docker Desktop alkalmazást, ez a háttérben fog futni. Első indításkor be kell állítani, hogy Linux-konténerek futtatására alkalmas legyen. Erről <a href="https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/set-up-linux-containers">ezen a linken</a> tudsz részletesen olvasni.</p>
-</li>
+<li>Indítsd el a Docker Desktop alkalmazást, ez a háttérben fog futni. Első indításkor be kell állítani, hogy Linux-konténerek futtatására alkalmas legyen. Erről <a href="https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/set-up-linux-containers">ezen a linken</a> tudsz részletesen olvasni.</li>
 <li>
 <p>Indítsd el a szükséges konténert, a UI-t a <a href="http://localhost:5000/">localhost:5000</a> elérési úton találod.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="n">docker-compose</span> <span class="n">up</span> <span class="n">-d</span> <span class="n">mlflow</span>
+<div class="highlight"><pre><span></span><code><span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="n">-d</span> <span class="n">mlflow</span>
 </code></pre></div>
 </li>
 </ol>
 </li>
 <li>
-<p>Telepítsd az MLflow csomagot a <code>poetry add mlflow</code> parancs segítségével, hogy a scriptben is használni tudd.</p>
+<p>Telepítsd az MLflow csomagot, hogy a scriptben is használni tudd.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"><input id="__tabbed_9_2" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">uv</label><label for="__tabbed_9_2">Poetry</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">add</span> <span class="n">mlflow</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">poetry</span> <span class="n">add</span> <span class="n">mlflow</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </li>
 <li>
 <p>Módosítsd a korábbi scriptet úgy, hogy logolja a kísérleteket.</p>
 <ol>
 <li>
 <p>Először konfiguráld a csomagot a script elején úgy, hogy a megfelelő szerverre logolja az adatokat.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">mlflow</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">mlflow</span>
 
 <span class="n">mlflow</span><span class="o">.</span><span class="n">sklearn</span><span class="o">.</span><span class="n">autolog</span><span class="p">(</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">mlflow</span><span class="o">.</span><span class="n">set_tracking_uri</span><span class="p">(</span><span class="s1">'http://localhost:5000'</span><span class="p">)</span>
@@ -1641,7 +2283,7 @@
 </li>
 <li>
 <p>A tanítást burkold be egy futtatásba (<code>run</code>), ami itt a különböző kísérleteket jelenti.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">ParameterGrid</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">ParameterGrid</span>
 
 <span class="k">for</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">ParameterGrid</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">mlflow</span><span class="o">.</span><span class="n">start_run</span><span class="p">()</span> <span class="k">as</span> <span class="n">run</span><span class="p">:</span>
@@ -1651,8 +2293,8 @@
 </li>
 <li>
 <p>A futtatáson belül logolj minden egyes modellt ONNX formátumban is, így később hozzá fogunk férni.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">skl2onnx</span> <span class="kn">import</span> <span class="n">convert_sklearn</span>
-<span class="kn">from</span> <span class="nn">skl2onnx.common.data_types</span> <span class="kn">import</span> <span class="n">FloatTensorType</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">skl2onnx</span><span class="w"> </span><span class="kn">import</span> <span class="n">convert_sklearn</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">skl2onnx.common.data_types</span><span class="w"> </span><span class="kn">import</span> <span class="n">FloatTensorType</span>
 
 <span class="n">onnx</span> <span class="o">=</span> <span class="n">convert_sklearn</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">initial_types</span><span class="o">=</span><span class="p">[(</span><span class="s1">'input'</span><span class="p">,</span> <span class="n">FloatTensorType</span><span class="p">([</span><span class="kc">None</span><span class="p">,</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))])</span>
 <span class="n">mlflow</span><span class="o">.</span><span class="n">onnx</span><span class="o">.</span><span class="n">log_model</span><span class="p">(</span><span class="n">onnx</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'onnx'</span><span class="p">)</span>
@@ -1712,12 +2354,22 @@
 <ol>
 <li>
 <p>Telepítsd az API-hoz szükséges <code>fastapi[all]</code> és az ONNX futtatáshoz szükséges <code>onnxruntime</code> csomagokat.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="n">poetry</span> <span class="n">add</span> <span class="n">fastapi</span><span class="no">[all]</span> <span class="n">onnxruntime</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"><input id="__tabbed_10_2" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1">uv</label><label for="__tabbed_10_2">Poetry</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">add</span> <span class="n">fastapi</span><span class="no">[all]</span> <span class="n">onnxruntime</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">poetry</span> <span class="n">add</span> <span class="n">fastapi</span><span class="no">[all]</span> <span class="n">onnxruntime</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </li>
 <li>
 <p>Futtasd az API-t és nézd meg a <a href="http://localhost:8000/docs">http://localhost:8000/docs</a> oldalt.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="n">fastapi</span> <span class="n">dev</span> <span class="n">api</span><span class="p">/</span><span class="n">api</span><span class="p">.</span><span class="n">py</span>
+<div class="highlight"><pre><span></span><code><span class="n">fastapi</span> <span class="n">dev</span> <span class="n">api</span><span class="p">/</span><span class="n">api</span><span class="p">.</span><span class="n">py</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Swagger használata</p>
@@ -1734,7 +2386,7 @@
 <ol>
 <li>
 <p>Vegyél fel két új változót a beállítások közé. Egyet az MLflow, másikat az osztályokat leíró JSON fájl elérési útjának. Állíts be alapértelmezett értéket.</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Settings</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Settings</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
     <span class="n">class_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"data/classes.json"</span>
     <span class="n">mlflow_uri</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"http://localhost:5000"</span>
 </code></pre></div>
@@ -1748,7 +2400,7 @@
 <ol>
 <li>
 <p>Állítsd be az MLflow elérési útját és töltsd le a legfrissebb osztályozó modellt.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">mlflow</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">mlflow</span>
 
 <span class="n">mlflow</span><span class="o">.</span><span class="n">set_tracking_uri</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">mlflow_uri</span><span class="p">)</span>
 
@@ -1764,7 +2416,7 @@
 </li>
 <li>
 <p>Készíts egy ONNX futtatókörnyezetet és mentsd el az alkalmazás állapotai közé, hogy később használni tudjuk.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">onnxruntime</span> <span class="k">as</span> <span class="nn">rt</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">onnxruntime</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rt</span>
 
 <span class="n">session</span> <span class="o">=</span> <span class="n">rt</span><span class="o">.</span><span class="n">InferenceSession</span><span class="p">(</span>
     <span class="n">model</span><span class="o">.</span><span class="n">SerializeToString</span><span class="p">(),</span>
@@ -1836,7 +2488,19 @@ mlflow
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Csomaglista fájlok</p>
-<p>A <code>requirements.txt</code> egy olyan csomaglista fájl, ami alapján egyszerűen tudunk Python környezetet telepíteni. Az aktuális projektünkben ez a <code>pyproject.toml</code> fájlnak felel meg, mivel ebben vannak a függőségek. Ahhoz viszont, hogy ezt használjuk, telepíteni kéne a <code>poetry</code>-t is a Docker környezetbe, míg a <code>requirements.txt</code>-t natívan támogatja. Ezt a fájlt elő tudjuk állítani az aktuális környezet lemásolásával, például a <code>pip freeze &gt; api/requirements.txt</code> paranccsal, vagy a <code>poetry export --without-hashes --output api/requirements.txt</code> segítségével is, de jelen példában törekedjünk az egyszerűségre, és állítsuk össze kézzel.</p>
+<p>A <code>requirements.txt</code> egy olyan csomaglista fájl, ami alapján egyszerűen tudunk Python környezetet telepíteni. Az aktuális projektünkben ez a <code>pyproject.toml</code> fájlnak felel meg, mivel ebben vannak a függőségek. Ahhoz viszont, hogy ezt használjuk, telepíteni kéne csomagkezelőt is a Docker környezetbe, míg a <code>requirements.txt</code>-t natívan támogatja. Ezt a fájlt elő tudjuk állítani az aktuális környezet lemásolásával, például a <code>pip freeze &gt; api/requirements.txt</code> paranccsal, vagy a csomagkezelővel a lenti parancs segítségével is, de jelen példában törekedjünk az egyszerűségre, és állítsuk össze kézzel.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"><input id="__tabbed_11_2" name="__tabbed_11" type="radio"><div class="tabbed-labels"><label for="__tabbed_11_1">uv</label><label for="__tabbed_11_2">Poetry</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">export</span> <span class="p">-</span><span class="n">-format</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span> <span class="p">-</span><span class="n">-no-hashes</span> <span class="p">-</span><span class="n">-output</span><span class="o">-file</span> <span class="n">api</span><span class="p">/</span><span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">poetry</span> <span class="n">export</span> <span class="p">-</span><span class="n">-without-hashes</span> <span class="p">-</span><span class="n">-output</span> <span class="n">api</span><span class="p">/</span><span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 </li>
 <li>
@@ -1940,7 +2604,7 @@ mlflow
 </ol>
 </li>
 <li>
-<p>Futtassuk a szolgáltatást a <code>docker-compose up -d api</code> paranccsal, és teszteljük a <a href="http://localhost/docs">http://localhost/docs</a> elérési utat.</p>
+<p>Futtassuk a szolgáltatást a <code>docker compose up -d api</code> paranccsal, és teszteljük a <a href="http://localhost/docs">http://localhost/docs</a> elérési utat.</p>
 </li>
 </ol>
 <h3 id="beadando_2">Beadandó<a class="headerlink" href="#beadando_2" title="Permanent link">¶</a></h3>
@@ -1949,7 +2613,7 @@ mlflow
 <ul>
 <li>Commitold a változtatásokat.</li>
 <li>Készíts egy képernyőképet az API Swagger interfészéről, és mentsd el <strong><code>f3-1.png</code></strong> néven a repository gyökerébe.</li>
-<li>Készíts egy képernyőképet a Docker Desktop felületéről, vagy a <code>docker-compose ps -a</code> parancs kimenetéről, és mentsd el <strong><code>f3-2.png</code></strong> néven a repository gyökerébe.</li>
+<li>Készíts egy képernyőképet a Docker Desktop felületéről, vagy a <code>docker compose ps -a</code> parancs kimenetéről, és mentsd el <strong><code>f3-2.png</code></strong> néven a repository gyökerébe.</li>
 </ul>
 </div>
 <h2 id="4-feladat-api-monitorozasa">4. feladat: API monitorozása<a class="headerlink" href="#4-feladat-api-monitorozasa" title="Permanent link">¶</a></h2>
@@ -1962,12 +2626,22 @@ mlflow
 <ol>
 <li>
 <p>Telepítsd a <a href="https://github.com/trallnag/prometheus-fastapi-instrumentator">prometheus-fastapi-instrumentator</a> csomagot.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="n">poetry</span> <span class="n">add</span> <span class="n">prometheus-fastapi-instrumentator</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"><input id="__tabbed_12_2" name="__tabbed_12" type="radio"><div class="tabbed-labels"><label for="__tabbed_12_1">uv</label><label for="__tabbed_12_2">Poetry</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">add</span> <span class="n">prometheus-fastapi-instrumentator</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">poetry</span> <span class="n">add</span> <span class="n">prometheus-fastapi-instrumentator</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </li>
 <li>
 <p>Importáld az <code>Instrumentator</code> osztályt, és kapcsold be az <code>api.py</code> fájlban. Ez automatikusan publikálni fogja a <code>/metrics</code> végpontot, amin a belső állapotokat publikálja.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prometheus_fastapi_instrumentator</span> <span class="kn">import</span> <span class="n">Instrumentator</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">prometheus_fastapi_instrumentator</span><span class="w"> </span><span class="kn">import</span> <span class="n">Instrumentator</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">Instrumentator</span><span class="p">()</span><span class="o">.</span><span class="n">instrument</span><span class="p">(</span><span class="n">app</span><span class="p">)</span><span class="o">.</span><span class="n">expose</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
@@ -1983,16 +2657,16 @@ mlflow
 <ol>
 <li>
 <p>Hozz létre egy új <code>predicted_class_name</code> függvényt az <code>api.py</code> elején (az <code>Instrumentator</code> előtt), ez fogja beburkolni a metrikát.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span>
-<span class="kn">from</span> <span class="nn">prometheus_client</span> <span class="kn">import</span> <span class="n">Info</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">prometheus_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">Info</span>
 
-<span class="k">def</span> <span class="nf">predicted_class_name</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Info</span><span class="p">],</span> <span class="kc">None</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">predicted_class_name</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Info</span><span class="p">],</span> <span class="kc">None</span><span class="p">]:</span>
     <span class="c1"># Ide jön a metrika kódja</span>
 </code></pre></div>
 </li>
 <li>
 <p>A függvényen belül hozz létre egy <code>Counter</code> objektumot, ez lesz maga a számláló. Töltsd ki alapinformációkkal. A számláló képes több mértéket is számolni, ezeket label-ekkel fogja azonosítani. Itt az osztálynevek lesznek a label-ek.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prometheus_client</span> <span class="kn">import</span> <span class="n">Counter</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">prometheus_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
 
 <span class="n">METRIC</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span>
     <span class="s2">"predicted_class_name"</span><span class="p">,</span>
@@ -2003,7 +2677,7 @@ mlflow
 </li>
 <li>
 <p>Hozz létre egy <code>instrumentation</code> függvényt a függvényen belül. Ez fogja a kérésre adott válaszból kinyerni, hogy a modell melyik osztályt prediktálta. Ez alapján pedig a megfelelő számlálót növeli.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">instrumentation</span><span class="p">(</span><span class="n">info</span><span class="p">:</span> <span class="n">Info</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">instrumentation</span><span class="p">(</span><span class="n">info</span><span class="p">:</span> <span class="n">Info</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">info</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="o">.</span><span class="n">path</span> <span class="o">==</span> <span class="s1">'/predict'</span> <span class="ow">and</span> <span class="n">info</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
         <span class="n">class_name</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">body</span><span class="p">)[</span><span class="s1">'class_name'</span><span class="p">]</span>
         <span class="n">METRIC</span><span class="o">.</span><span class="n">labels</span><span class="p">(</span><span class="n">class_name</span><span class="p">)</span><span class="o">.</span><span class="n">inc</span><span class="p">()</span>
@@ -2023,10 +2697,10 @@ mlflow
 <span class="p">)</span>
 </code></pre></div>
 </li>
-</ol>
-</li>
 <li>
 <p>Indítsd újra az alkalmazást, és teszteld az API <code>/metrics</code> végpont kimenetét. Először a metrika még nem fog megjelenni a metrikák között, csak akkor, ha végzel néhány predikciót. Próbálj ki több különbözőt, hogy az összes osztálynév megjelenjen.</p>
+</li>
+</ol>
 </li>
 <li>
 <p>Frissítsd az éles alkalmazást is a Docker konténerben, hogy képes legyen a metrikákat publikálni.</p>
@@ -2039,7 +2713,7 @@ prometheus-fastapi-instrumentator
 </li>
 <li>
 <p>Buildeld és indítsd újra a szolgáltatást.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="n">docker-compose</span> <span class="n">up</span> <span class="n">-d</span> <span class="p">-</span><span class="n">-build</span> <span class="n">api</span>
+<div class="highlight"><pre><span></span><code><span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="n">-d</span> <span class="p">-</span><span class="n">-build</span> <span class="n">api</span>
 </code></pre></div>
 </li>
 <li>
@@ -2056,7 +2730,7 @@ prometheus-fastapi-instrumentator
 <ol>
 <li>Adj meg neki egy tetszőleges <code>job_name</code> nevet (pl.: api).</li>
 <li>A <code>metrics_path</code> legyen <code>/metrics</code>, ez fogja mutatni, hol találja a metrikákat.</li>
-<li>A <code>static_configs</code> alá vegyél fel egy <code>targets</code> bejegyzést, ami a szolgáltatás hostnevét tartalmazza. Itt is hasonlóan a docker-compose-ban található névre tudunk hivatkozni, ami szintén <code>api</code>. Mivel a 80-as porton kell hallgatózni, ezért a portot nem kell kiírni.</li>
+<li>A <code>static_configs</code> alá vegyél fel egy <code>targets</code> bejegyzést, ami a szolgáltatás hostnevét tartalmazza. Itt is hasonlóan a docker compose-ban található névre tudunk hivatkozni, ami szintén <code>api</code>. Mivel a 80-as porton kell hallgatózni, ezért a portot nem kell kiírni.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
@@ -2069,7 +2743,7 @@ prometheus-fastapi-instrumentator
 </code></pre></div>
 </li>
 <li>
-<p>Indítsd el a <code>prometheus</code> Docker konténert a <code>docker-compose up -d prometheus</code> parancs segítségével.</p>
+<p>Indítsd el a <code>prometheus</code> Docker konténert a <code>docker compose up -d prometheus</code> parancs segítségével.</p>
 </li>
 <li>
 <p>Vizsgáld meg a Prometheus UI felületét a <a href="http://localhost:9090">http://localhost:9090</a> linken.</p>
@@ -2083,7 +2757,7 @@ prometheus-fastapi-instrumentator
 <h3 id="grafana-beallitasa">Grafana beállítása<a class="headerlink" href="#grafana-beallitasa" title="Permanent link">¶</a></h3>
 <p>Ahogy láttuk, a Prometheus is képes a gyűjtött metrikák vizualizálására, de nagyon limitáltak a lehetőségek. Komplexebb vizualizációkhoz a Grafanát szokták elterjedten használni.</p>
 <ol>
-<li>Futtasd a Grafana UI felületét a <code>docker-compose up -d grafana</code> paranccsal.</li>
+<li>Futtasd a Grafana UI felületét a <code>docker compose up -d grafana</code> paranccsal.</li>
 <li>Látogasd meg a <a href="http://localhost:3000">http://localhost:3000</a> linket. Alapértelmezetten a felhasználónév és a jelszó is <code>admin</code>.</li>
 <li>
 <p>Add hozzá a UI-hoz a Prometheus adatforrást.</p>
@@ -2218,16 +2892,15 @@ prometheus-fastapi-instrumentator
 <li>A promptnaplót mentsd el a projekt gyökerébe <code>prompts.log</code> néven, és <strong>commitold</strong>.</li>
 </ul>
 </div>
-
-    <hr>
+  <hr>
   <div class="md-source-file">
     <span class="md-source-file__fact"> <span class="md-icon" title="Utolsó frissítés"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z">
           </path>
         </svg>
       </span>
-      <span title="2025. szeptember 15. 16:55:58">
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025. szeptember 15. 16:55:58 CEST"><span class="timeago" datetime="2025-09-15T16:55:58+02:00" locale="hu"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025. szeptember 15. 16:55:58 CEST">2025-09-15</span>
+      <span title="2026. szeptember 23. 16:36:51">
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026. szeptember 23. 16:36:51 CEST"><span class="timeago" datetime="2026-09-23T16:36:51+02:00" locale="hu"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026. szeptember 23. 16:36:51 CEST">2026-09-23</span>
       </span>
     </span>
 
@@ -2250,18 +2923,21 @@ prometheus-fastapi-instrumentator
 
 
 
-
                 
               </article>
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden="">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
-            Vissza a tetejére
-          </a>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Vissza a tetejére
+</button>
         
       </main>
       
@@ -2287,10 +2963,14 @@ prometheus-fastapi-instrumentator
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.top", "search.suggest"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.top", "search.suggest", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       
