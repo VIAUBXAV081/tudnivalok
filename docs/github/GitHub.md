@@ -1,180 +1,363 @@
 # Feladatok beadása (GitHub)
 
-A feladatok beadásához a GitHub platformot használjuk. Minden labor beadása egy-egy GitHub repository-ban történik, melyet a feladatleírásban található linken keresztül kapsz meg. A labor feladatainak megoldását ezen repository-ban kell elkészítened, és ide kell feltöltened. A kész megoldás beadása a repository-ba való feltöltés után egy un. _pull request_ formájában történik, amelyet a laborvezetődhöz rendelsz.
+Minden feladat beadásához a **GitHub** platformot használjuk. Minden labor beadása egy-egy GitHub repository-ban történik, melyet a Moodle-ben található linken keresztül fogtok megkapni. A feladatok megoldását ezen repository-ban kell majd elkészíteni, és ide kell feltölteni. A kész megoldás beadása a repository-ba való feltöltés után egy un. **pull request** formájában történik, amelyet mindig az adott laborvezetőhöz kell rendelnetek.
 
-!!! important "FONTOS"
+!!! warning "Fontos"
     Az itt leírt formai előírások betartása elvárás. A nem ilyen formában beadott megoldásokat nem értékeljük.
 
 ## Rövidített verzió
 
 Alább részletesen bemutatjuk a beadás menetét. Itt egy rövid összefoglaló az áttekintéshez, illetve a helyes beadás ellenőrzéséhez.
 
-1. A munkádat Moodle-ben található GitHub Classroom meghívó linken keresztül létrehozott GitHub repository-ban kell elkészítsd.
+1. A munkádat Moodle-ben található Classroom meghívó linken keresztül létrehozott GitHub repository-ban kell elkészítsd.
 
-1. A megoldáshoz készíts egy külön ágat, ne a _master_-en dolgozz. Erre az ágra akárhány kommitot tehetsz. Mindenképpen pushold a megoldást.
+2. A megoldáshoz készíts egy külön ágat, ne a _master_-en dolgozz. Erre az ágra akárhány kommitot tehetsz. Mindenképpen pushold a megoldást.
 
-1. A beadást egy pull request jelzi, amely pull request-et a laborvezetődhöz kell rendelned.
+3. A beadást egy pull request jelzi, amely pull request-et a laborvezetődhöz kell rendelned.
 
-1. Ha az eredménnyel vagy értékeléssel kapcsolatban kérdésed van, pull request kommentben kérdezhetsz. A laborvezető értesítéséhez használd a `@név` címzést a komment szövegében.
+4. Ha az eredménnyel vagy értékeléssel kapcsolatban kérdésed van, pull request kommentben kérdezhetsz. A laborvezető értesítéséhez használd a `@név` címzést a komment szövegében.
 
-## A munka elkezdése: git checkout
+## Előkészületek
 
-1. [Regisztrálj](https://github.com/join) egy GitHub accountot, ha még nincs.
+Első lépésként, ha még nem lenne accountod, [regisztrálj](https://github.com/join) egy GitHub felhasználót.
 
-1. Moodle-ben a kurzus oldalán keresd meg a laborhoz tartozó meghívó URL-t. Ez minden laborhoz más lesz, ügyelj rá, hogy a megfelelő linket használd.
+## Repository létrehozása
 
-1. Ha kéri, adj engedélyt a _GitHub Classroom_ alkalmazásnak, hogy használja az account adataidat.
+Minden laboron az aktuális feladathoz egy meghívó URL lesz a Moodle-ben. A meghívás elfogadásával létre fog jönni a saját repositoryd amiben a megoldásokat kell elkészíteni. Az URL minden laborhoz más lesz.
 
-    ![Authorize GitHub classroom](./assets/github-authorize-classroom.png)
+1. Keressük meg a Moodle kurzus oldalán a laborhoz tartozó **meghívó URL-t**, és nyissuk meg.
 
-1. Látni fogsz egy oldalt, ahol elfogadhatod a feladatot ("Accept the ... assignment"). Kattints a gombra.
+2. Ha kéri, jelentkezzünk be az eduID azonosítónkkal.
+    <figure markdown>
+      ![EduID bejelentkezési oldal a Moodle feladat elfogadásához](assets/ahk-eduid-login.png)
+    </figure>
 
-    ![Accept assignment](./assets/github-accept-assignment.png)
+3. Látni fogunk egy oldalt, ahol elfogadhatjuk a feladatot (`Accept this assignment`). Kattintsunk a gombra.
+    <figure markdown>
+      ![Feladat elfogadása a GitHub repository létrehozásához](assets/ahk-accept.png)
+    </figure>
 
-1. Várd meg, amíg elkészül a repository. A repository linkjét itt kapod meg.
+4. Várjuk meg, amíg elkészül a repository. A repository linkjét itt fogjuk megkapni.
+    <figure markdown>
+      ![Repository elkészült a Moodle feladat elfogadása után](assets/ahk-ready.png)
+    </figure>
 
-    !!! note "Megjegyzés"
-        A repository privát lesz, azaz az senki nem látja, csak te, és az oktatók.
+5. Nyissuk meg a repository-t a webes felületen a linkre kattintva (vagy várjuk meg, míg automatikusan továbbirányít minket).
+    <figure markdown>
+      ![GitHub repository megnyitása a létrehozott linkre kattintva](assets/github-ahk-repository.png)
+    </figure>
 
-    ![Repository created](./assets/github-repository-create-success.png)
+!!! note "Megjegyzés"
+    A repository privát, vagyis csak te és az oktatók látják a tartalmát.
 
-1. Nyisd meg a repository-t a webes felületen a linkre kattintva. Ezt az URL-t írd fel, vagy mentsd el.
+## Repository letöltése
 
-    ![Repository webes felülete](./assets/github-repository-webpage.png)
+Annak érdekében, hogy a repository-n dolgozni tudjuk, szükségünk van egy lokális verzióra, amit klónozással fogunk létrehozni. A git alapvetően egy parancssoros alkalmazás, vagyis minden műveletet a parancssorba gépelt utasításokkal tudunk végrehajtani. Viszont annak érdekében, hogy ne kelljen különböző utasításokat ismerni, számos vizuális git kliens program készült már. Ha már van kedvencünk, akkor nyugodtan használjuk azt, mivel bármelyikkel el tudjuk végezni a feladatot. Ha még nem ismerünk ilyet, akkor kövessük az alábbi útmutatót, ahol a Git Extensions programot mutatjuk be. Minden egyes lépéshez kiírjuk a parancssoros megfelelőjét is az utasításnak.
 
-1. Klónozd le a repository-t. Ehhez szükséges lesz a repository címére, amit a repository webes felületén a _Clone or download_ alatt találsz.
+!!! info "Kliens"
+    Szükségünk lesz a [Git](https://git-scm.com/download/win) valamint a [Git Extensions](https://gitextensions.github.io/) szoftverre telepítve a gépünkre.
 
-    A git repository kezeléséhez tetszőleges klienst használhatsz. Ha nincs kedvenced még, akkor legegyszerűbb a [GitHub Desktop](https://desktop.github.com/). Ebben az alkalmazásban közvetlenül tudod listázni a repository-kat GitHub-ról, vagy használhatod az URL-t is a klónozáshoz.
+1. Másoljuk ki a repository linkjét.
 
-    ![GitHub Desktop repository clone](./assets/github-desktop-clone.png)
+    ![A repository URL kimásolása a GitHub felületén](assets/github-code-copy.png)
 
-    Ha konzolt használnál, az alábbi parancs klónozza a repository-t (ha a `git` parancs elérhető): `git clone <repository link>`
+1. Nyissuk meg a Git Extensions programot.
 
-    !!! note "Sikertelen klónozás"
-        Amennyiben a bejelentkezés sikertelen felhasználónév/jelszó párossal a "Clone with HTTPS" esetén, (régebb óta használt felhasználónál) érdemes ellenőrizni a git-en található Personal Access token lejárati dátumát. 
-        
-        `Jobb felső sarokban a profilkép melletti lefelé mutató nyil > Settings > bal oldalon (legalsó) Developer settings > ugyanitt Personal access tokens.`
-        
-		*Alternatív módszerként: HTTP klónozás helyett, SSH kulcs használatához, angol nyelvű instrukciók [itt](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls) találhatóak.*
+1. Első használatkor, vagy a labor kezdetén állítsuk be a nevünket és az email címünket:
+    - Válasszuk a `Tools` > `Settings` menüt.
+    - Navigáljunk el a `Git` > `Config` almenübe a bal oldalon található fában.
+    - Adjuk meg a nevünket és az email címünket, amivel regisztráltunk a GitHub-ra.
 
-1. Ha sikerült a klónozás, **MÉG NE KEZDJ EL DOLGOZNI!** A megoldást _ne_ a repository `master`/`main` ágán készítsd el. Hozz létre egy új ágat (branch) `megoldas` néven.
+    ![Git Extensions beállítások a név és email megadásához](assets/git-ext-config.png)
 
-    GitHub Desktop-ban a _Branch_ menüben teheted ezt meg.
-
-    ![GitHub Desktop create branch](./assets/github-desktop-new-branch.png)
-
-    Ha konzolt használsz, az új ág elkészíthető ezzel a paranccsal: `git checkout -b megoldas`
-
-1. Ezen a megoldás ágon dolgozva készítsd el a beadandókat. Akárhányszor kommitolhatsz és pusholhatsz. A megoldás része a forráskód és a feladatokban elvárt képernyőképek. Ha a feladat képernyőképet vár el, akkor azt a repository gyökerébe commitold az elvárt néven.
-
-    !!! note "Egyetemi laborban"
-        Laborgépeken mindig ellenőrízd, hogy a megfelelő névvel és email címmel kommitolsz-e. Ezt a következő command line paranccsal tudod megtenni.
-
-        ```bash
-        git config user.name
-        git config user.email
-        ```
-        
-        Ha ez nem megfelelő lenne, akkor add ki az alábbi parancsokat a git repository mappájában. Ezzel az adott repository-ra fogod beállítani a kívánt nevet és email címet. (Érdemes olyan email címet, megadni ami a github useretekhez van rendelve)
-        
-        ```bash
-        git config user.name "John Doe"
-        git config user.email "john@doe.org"
-        ```
-
-    !!! tip "Otthon"
-        Otthon a fentieket érdemes lehet a globálisan vizsgálni és felülírni a `--global` kapcsolóval.
-
-    GitHub Desktop-ban így tudsz kommitolni. Mindig ellenőrizd, hogy jó ágon vagy-e. Első alkalommal a _megoldas_ ág csak helyben létezik, ezért publikálni kell: _Publish this branch_.
-
-    ![GitHub Desktop push branch](./assets/github-desktop-commit-to-branch.png)
-
-    A további kommitoknál is mindig ellenőrizd a megfelelő ágat. Ha egy kommit még nincs felöltve, azt a _Push origin_ gombbal teheted meg. A kis szám a gombon jelzi, hogy hány, még nem pusholt kommit van.
-
-    ![GitHub Desktop commit and push](./assets/github-desktop-push-commit.png)
-
-    Ha konzolt használsz, akkor az alábbi parancsokat használd (feltéve, hogy a jó ágon vagy):
+    **Parancssorban**
 
     ```bash
-    # Ellenőrizd az ágat, és hogy milyen fájlok módosultak
-    git status
-    
-    # Minden változtatást előkészít kommitolásra
-    git add .
-    
-    # Kommit
-    git commit -m "f1"
-    
-    # Push első alkalommal az új ág publikálásához
-    git push --set-upstream origin megoldas
-    
-    # Push a továbbiakban, amikor az ág már nem új
-    git push
+    git config user.name "nev"
+    git config user.email "nev@email.hu"
     ```
 
-## A megoldás beadása
+    Érdemes a global kapcsolót használni, ekkor nem kell minden alkalommal megcsinálni.
 
-1. Ha végeztél a megoldással, ellenőrizd a GitHub webes felületén, hogy mindent feltöltöttél-e. Ehhez a webes felületen váltanod kell az ágak között.
+    ```bash
+    git config --global user.name "nev"
+    git config --global user.email "nev@email.hu"
+    ```
 
-    ![GitHub web switch branch](./assets/github-switch-branch-webpage.png)
+1. Klónozzuk le a repositoryt.
+    - Válasszuk a ˙Clone repository` opciót.
+    - A `Repository to clone`-hoz adjuk meg a linket amit kimásoltunk.
+    - A `Destination`-nek adjuk meg, hol szeretnénk létrehozni a lokális másolatot.
+    - Menjünk a `Clone` gombra, majd `OK` és `Igen`
 
-    !!! warning "Feltöltés a webes felületen"
-        Azt javasoljuk, hogy ne használd a GitHub fájl feltöltés funkcióját. Ha valami hiányzik, a helyi git repository-ban pótold, és kommitold majd pushold.
+    ![Git Extensions repository klónozása ablak](assets/git-ext-clone.png)
 
-1. Ha tényleg kész vagy, akkor nyiss egy _pull request_-et.
+    - Abban az esetben, ha authentikációt kér a program, válasszuk a böngészős megoldást, vagy adjuk meg a felhasználónevünket és egy **personal access token**-t.
 
-    !!! important "Minek a pull request?"
-        Ez a _pull request_ fogja össze a megoldásodat, és annak "végeredményét" mutatja. Így a laborvezetőnek nem az egyes kommitjaidat vagy fájljaidat kell néznie, hanem csak a releváns, változott részeket látja egyben. A _pull request_ jelenti a feladatod beadását is, így ez a lépés **nem hagyható ki**.
+    !!! warning "Personal Access Token"
+        2021 óta a GitHub nem fogad el jelszót az egyes műveletek authentikálásához, emiatt szükségünk lesz egy **Personal Access Token**-re, és mindenhol ezt kell majd használnuk a jelszó helyett.
 
-    A _pull request_ nyitásához a GitHub webes felületére kell menj. Itt, ha nem rég pusholtál, a GitHub fel is ajánlja a pull request létrehozását.
+        Tokent a következő módon lehet generálni:
 
-    ![GitHub create pull request](./assets/github-create-pull-request-1.png)
-
-    A _pull request_-et a fenti menüben is létrehozhatod. Fontos, hogy a megfelelő brancheket válaszd ki: `master`-be megy a `megoldas` ág.
-
-    ![GitHub create pull request](./assets/github-create-pull-request-2.png)
-
-    Ha minden rendben sikerült, a menüben fent látod a kis "1" számot a _Pull request_ elem mellett, jelezve, hogy van egy nyitott pull request. **DE MÉG NEM VÉGEZTÉL!**
-
-    ![GitHub create pull request](./assets/github-create-pull-request-4.png)
-
-1. A _pull request_ hatására le fog futni egy értékelés. Ennek eredményét a pull request alatt kommentben fogod látni.
-
-    Ez az értékelés minden labor esetében más lesz. Egyes laboroknál a programodat lefuttatjuk, és előzetes pontszámot is kapsz. Más laboroknál csak "szintaktikai ellenőrzést" végzünk.
-
-    ![GitHub create pull request](./assets/github-pull-request-eval-result.png)
-
-     Ha a kiértékelés eredményével kapcsolatban több információra van szükséged, mint amit itt látsz, a _GitHub Actions_ webes felülete segítségül szolgálhat. Erről [itt](GitHub-Actions.md) találsz egy rövid ismertetőt.
-
-1. Ha nem vagy megelégedve a munkáddal, akkor még javíthatsz rajta. Ehhez kommitolj és pusholj újra. Ha továbbra is a megfelelő ágon dolgozol, akkor a _pull request_ újból le fogja futtatni a kiértékelést. Arra kérünk, hogy **MAXIMUM 5 alkalommal** futtasd le a kiértékelést!
-
-    !!! tip "Megoldás javítása kiértékelés nélkül"
-        Ha úgy látod, hogy a megoldásodat még javítani akarod, és nem szeretnéd, hogy mindig lefusson az értékelés, akkor állítsd át a pull request-et a webes felületen **draft** állapotra.
-
-        ![GitHub create pull request](./assets/github-convert-pr-to-draft.png)
+        - Látogassunk el a [https://github.com/settings/tokens](https://github.com/settings/tokens) oldalra.
+        - Válasszuk a `Generate new token` > `Generate new token (classic)` opciót.
+        - Adjunk meg egy leírást a `Note` mezőbe.
+        - Adjuk meg, hogy mikor járjon le a token az `Expiration` mezőbe. Választhatunk hosszú időtartamot, mivel a kliens meg fogja jegyezni.
+        - A `Scope`-nál pipáljuk be a `repo`-t.
         
-        Ezzel az állapottal jelzed, hogy még dolgozol. Kommitolj és pusholj. Ilyenkor nem fog futni kiértékelés. Ha végeztél, akkor vissza **kell** állítanod a pull request-et: menj a PR aljára és kattints a "Ready for review" gombra. Ennek hatására visszaáll a PR és le fog futni az automata értékelés.
+        ![GitHub personal access token létrehozása a beállításokban](assets/github-access-token.png)
         
-        ![GitHub create pull request](./assets/github-draft-pr-ready.png)
+        - Menjünk a `Generate token` gombra a lap alján.
+        - **Másoljuk ki** a kapott tokent és **mentsük el** valahova, mert többet nem lesz lehetőségünk megnézni.
+        - Minden alkalommal, amikor a git kliens jelszót kér, a tokent kell megadni.
 
-    !!! info "Maximum 5"
-        A maximum 5 alkalomba nem számoljuk bele az esetlegesen megszakadt, vagy tranziens hiba miatt sikertelen futtatásokat. Ha viszont figyelmetlenségből, vagy szándékosan túlléped az ötöt, akkor pontlevonással szankcionálunk. Arra kérünk, hogy beadás előtt **teszteld a megoldásod**, ne a GitHub platformot "dolgoztasd" magad helyett!
+    ![Git Extensions inicializálás és repository klónozása](assets/git-ext-init.png)
 
-1. **VÉGEZETÜL**, ha kész vagy, a _pull request_-et rendeld a **laborvezetődhöz**. Ez a lépés feltétlenül fontos, ez jelzi a beadást.
+    **Parancssorban**
 
-    ![GitHub create pull request](./assets/github-create-pull-request-3.png)
+    ```bash
+    cd <mappa, ahova szeretnék klónozni>
+    git clone <repository url>
+    ```
 
-    !!! error "Pull request nélkül"
-        Ha nincs pull request-ed, vagy nincs a laborvezetőhöz rendelve, akkor úgy tekintjük, hogy még nem vagy készen, és nem adtad be a megoldást.
+## Új branch létrehozása és Neptun kód megadása
 
-    !!! success "Végeztél"
-        Miután a laborvezetőhöz rendelted a pull request-et, már **ne módosíts** semmin. A laborvezető értékelni fogja a munkádat, és a pull request lezárásával kommentben jelzi a végeredményt.
+Klónozás után a kiindulási kódunk a master branchen található, ahol még semmilyen nyoma nincs a labor megoldásnak. A beadás során a laborvezető mindig a te munkádra lesz kíváncsi, ezért a beadott megoldást mindig a kiindulási alappal fogja összehasonlítani és a változásokat értékelni. Ennek érdekében a kiindulási alapot meg kell tartanunk abban az állapotban, amiben van, vagyis a **master** branchre ne kommitolj **soha**! Helyette létrehozunk egy új ágat (branch) és azon fogunk dolgozni, majd pedig a pull requestet adunk be, ami pontosan ezt a két ágat fogja összehasonlítani.
 
-## Kapott eredménnyel kapcsolatban kérdés vagy reklamáció
+!!! note "Figyelem"
+    Abban az esetben ha ezt a branchet már korábban létrehoztad és csak folytatni szeretnéd a megkezdett munkád, akkor hagyd ki ezt a lépést és ugorj a [Váltás meglévő branchre](#valtas-meglevo-branchre) lépésre.
 
-Ha a feladatok értékelésével vagy az eredménnyel kapcsolatban kérdést tennél fel, vagy reklamálnál, használd a Pull Request kommentelési lehetőségét erre. Annak érdekében, hogy a laborvezető biztosan értesüljön a kérdésről használd a `@név` [mention](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#mentioning-people-and-teams) funkciót a **laborvezetőd** megnevezéséhez. Erről automatikusan kapni fog egy email értesítést.
+1. Hozzunk létre egy új branchet.
+    - Válasszuk a `Commands` > `Create branch...` menüpontot.
+    - Adjunk meg egy nevet az új branchnek. Bármilyen neved adhatunk, de az egységesség kedvéért legyen `megoldas`.
+    - Figyeljünk rá, hogy a branch nevében ne legyen ékezet.
+    - Menjünk a `Create branch` gombra, majd `OK`.
 
-![GitHub PR kérdés](./assets/github-question-in-pr.png)
+    ![Új branch létrehozása a Git Extensionsben](assets/git-ext-new-branch.png)
 
-!!! warning "Reklamáció csak indoklással"
-    Ha nem értesz egyet az értékeléssel, a bizonyítás téged terhel, azaz alá kell támasztanod a reklamációd (pl. annak leírásával, hogyan tesztelted a megoldásod, és mi bizonyítja a helyességét).
+    **Parancssorban**
+
+    ```bash
+    git checkout -b <branch név>
+    ```
+
+1. Nyissuk meg a repositoryt és töltsük ki a `neptun.txt` fájlt.
+    - A fájlt a repository gyökerében találjuk.
+    - Ne írjunk semmi mást a fájlba, csakis a Neptun kódunk 6 karakterét csupa nagybetűvel (pl. ABC123).
+
+1. Kommitoljuk a változtatást.
+    - Ellenőrizzük, hogy a megfelelő branchen vagyunk, majd menjünk a `Commit` gombra. A szám a felirat mellett a változtatások számát jelenti.
+
+    ![Commit előtti változtatások ellenőrzése a Git Extensionsben](assets/git-ext-precommit.png)
+
+    - Válasszuk ki a változtatásokat, amiket szeretnénk menteni és vigyük le a `Stage` / `Stage all` gombokkal.
+    - Adjunk meg egy üzenetet, hogy mit tartalmaz a commit.
+    - Menjünk a `Commit` gombra, majd `OK`.
+
+    ![Commit létrehozása a Git Extensionsben](assets/git-ext-commit.png)
+
+    **Parancssorban**
+
+    ```bash
+    git status # változások lekérése
+
+    git add <fájlnév> # adott fájl stagelése
+    git add -A # összes fájl stagelése
+
+    git commit -m <commit üzenet> # stagelt változtatások kommitolása
+    ```
+
+## Váltás meglévő branchre
+
+Előfordulhat olyan eset, hogy egy korábbi alkalommal már elkezdted a munkát, de nem sikerült befejezni, ezért most folytatni szeretnéd. Ebben az esetben nem kell újra létrehozni a `megoldas` branchet, hanem a meglévőt tudod folytatni. Ahhoz, hogy folytatni tudd, először ki kell választanod a megfelelő branchet.
+
+1. Nyisd le a branch választó legördülő menüt és menj a `Checkout branch` opcióra.
+
+    ![Meglévő branch kiválasztása a Git Extensionsben](assets/git-ext-checkout.png)
+
+2. Menj a `Remote branch`-re, válaszd az `origin/megoldas` branchet, majd `Checkout` és `OK`.
+
+    ![Távoli branch kiválasztása a Git Extensionsben](assets/git-ext-checkout-remote.png)
+
+    **Parancssorban**
+
+    ```bash
+    git checkout <branch> 
+
+    # például ebben az esetben:
+
+    git checkout megoldas
+    ```
+
+## Megoldások elkészítése
+
+Ezután következik a megoldások elkészítése. Ennek során figyelj a következőkre:
+
+- A feladatokat a kiadott leírás illetve a laborvezető utasításai alapján készítsd el.
+- Gyakran, de legalább akkor, amikor az útmutató kéri, kommitolj.
+- Figyelj rá, hogy mindig jó branchen legyél, valamint hogy minden módosítást kommitolj.
+- A beállítási fájlokat, fordítási eredményeket (pl.: `bin`, `obj`, `.user`) ne kommitolj.
+- Commit üzenetnél nem számít, hogy magyarul vagy angolul írod, de mindig értelmes üzenetet adj meg ami tükrözi, hogy mit tartalmaz a változtatás.
+- Amennyiben a feladat képernyőképet kér, azt mindig a megfelelő helyre, a megadott néven mentsd el.
+- Szöveges válaszok esetén a kiadott leírás szövegébe, a megfelelő helyre kell írni a választ.
+
+## Megoldások feltöltése
+
+Miután végeztünk, de legkésőbb a labor végén, töltsük fel a megoldásokat a távoli GitHub repositoryba. Ezt a műveletet `push`-nak hívják.
+
+1. Ellenőrizzük, hogy a megfelelő branchen állunk, illetve vannak-e lokális kommitok:
+    - Azt, hogy a branchek melyik commitra mutatnak, a fában láthatjuk.
+    - A lokális brancheket zöld színnel, a távoli brancheket bordó színnel láthatjuk.
+    - A `megoldas` branch csak lokálisan létezik, mivel nincs sehol `origin/megoldas`.
+    - Amennyiben a lokális és a távoli branch ugyanarra a commitra mutat, akkor a változtatások szinkronizálva vannak.
+
+    ![Branch és változtatások státusz ellenőrzése a Git Extensionsben](assets/git-ext-status.png)
+
+    **Parancssorban**
+
+    ```bash
+    git log
+    ```
+
+1. Menjünk a `Push` gombra, majd ismét `Push`, `Igen`, `Igen` és `OK`.
+    - Ha autentikációt kér, használjuk a korábbi lépésben elkészített tokent.
+
+    ![Repository feltöltése a Git Extensionsben](assets/git-ext-push.png)
+
+    **Parancssorban**
+
+    ```bash
+    git push --set-upstream origin <branch> # első alkalommal, amikor még nem létezik a távoli
+
+    git push # minden további alkalommal
+    ```
+
+1. Ellenőrizzük, hogy szinkronban van-e a lokális és a távoli branch.
+    - A lokális és a távoli branch ugyanarra a commitra mutat.
+    - Nincs nem kommitált változtatás.
+
+    ![Feltöltés utáni állapot ellenőrzése a Git Extensionsben](assets/git-ext-postpush.png)
+
+    **Parancssorban**
+
+    ```bash
+    git status
+    ```
+
+## Megoldások beadása (pull request)
+
+Miután feltöltöttünk mindent, még nem vagyunk készen. Még be kell adni a módosításokat amihez egy pull requestet kell létrehozni.
+
+1. Keressük fel a repository oldalát a GitHub-on.
+
+1. Hozzunk létre egy pull requestet.
+    - Ha nem rég pusholtunk, akkor a GitHub fel is ajánla, hogy létrehozhatjuk a pull requestet.
+    - Más esetben menjünk a pull request fülre.
+
+    ![Pull request létrehozása a GitHub repositoryban](assets/github-create-pr.png)
+
+    - Menjünk a `Create pull request` gombra.
+    - A `base` legyen a `master`, a `compare` pedig a `megoldas` branch.
+  
+    !!! note "Megjegyzés"
+        A `base` az, ami a kiinduló állapotot tartalmazza, a `compare` pedig az, ami ehhez képest a kiegészítéseket. Ha ezeket felcseréled, akkor például a hozzáadásokat a laborvezető törlésnek, a törléseket pedig hozzáadásnak fogja látni. Ha a folyamat közben valamit másképp csináltál, akkor ennek megfelelően változhat, hogy melyik branchet melyikhez kell kiválasztani.
+
+    - Ellenőrizzük a változtatásainkat, melyek megjelennek lejjebb, majd menjünk a `Create pull request` gombra.
+
+    ![Pull request alap és összehasonlító branch kiválasztása](assets/github-pr-branches.png)
+
+    - Adjunk a pull requestnek rövid, beszédes címet (pl. Lab1 megoldás).
+    - Olvassuk át az alapértelmezett leírást, és szükség szerint írjunk hozzá megjegyzést. (A preview fülre kattintva jobban olvasható.)
+
+    ![Pull request leírása és címe kitöltése a GitHubon](assets/github-pr-description.png)
+
+    - Ha minden ok, menjünk a `Create pull request` gombra.
+
+    !!! warning "Fontos"
+        Miután megnyitottad a pull requestet, le fog futni egy automatikus kiértékelés:
+
+        - A kiértékelő az alapvető formai követelményeket ellenőrizni (pl. kitöltötted-e a `neptun.txt`-t).
+        - Kigyűjti a képernyőképeket, amiket egy komment formájában fog posztolni. 
+        ![Automatikus értékelés eredménye komment formájában](assets/github-evaluation-comment.png)
+        - Ha nem vagy elégedett az eredménnyel, akkor további kommitokkal tudod javítani. 
+        - Minden egyes alkalommal, amikor pusholsz a branchre, ismét le fog futni az értékelés. Ha ezt nem szeretnéd, állítsd a pull requestet `Draft`-ra.
+        ![Pull request átállítása draft állapotba](assets/github-pr-draft.png)
+        - Ha elégedett vagy a végeredménnyel, és szeretnéd ismét lefuttatni az ellenőrzőt, állítsd a pull request állapotát vissza.
+        ![Pull request visszaállítása kész állapotba](assets/github-pr-ready.png)
+        - **Maximum 5 alkalommal** futtathatod a kiértékelést, utána nem fogadjuk el a beadott megoldást. Ez amiatt van, mert az erőforrások végesek, és ha túlterheled az ellenőrzőt, akkor elképzelhető, hogy másoknak már nem jut szabad erőforrás. Az értékelések számát az **Actions** fülön lehet legkönnyebben leolvasni. Itt azok a futtatások számítanak, amik ténylegesen lefutottak és a státuszuk nem `Skipped`.
+        ![Pull request ellenőrzési futtatások a GitHub Actionsben](assets/github-pr-checks.png)
+
+1. Ellenőrizzük a pull request tartalmát.
+
+    - A **Conversation** fülön látjuk az automatikus kiértékelő futásának eredményét és később a laborvezető visszajelzését.
+    - A **Commits** fülön látjuk a saját commitjainkat. Abban az esetben, ha a git kliensünk rosszul van konfigurálva, itt a saját nevünk helyett akár másét is láthatjuk.
+    - A **Checks** fülön az automatikus kiértékelésekről kaphatunk több információt.
+    - A **Files changed** fülön a változtatásokat látjuk, ami alapján a laborvezető értékelni fogja a munkánkat. Ha itt nem látsz mindent módosítást, akkor valamit elrontottál.
+
+1. További munka hozzáadása.
+
+    - Abban az esetben ha valamilyen hibát tapasztaltál, vagy nem vagy elégedett a végeredménnyel, akkor további módosításokat tudsz még hozzáadni.
+    - Nem szükséges a pull request törlése, vagy lezárása!
+    - További commitok hozzáadása és pusholása után a változtatások automatikusan megjelennek a pull requestben.
+    - Figyelj rá, hogy minden pusholáskor le fog futni a kiértékelés ha nem állítod a pull requestet piszkozat (draft) állapotúra.
+
+1. Végül ha mindennel elégedett vagy, rendeld hozzá a pull requestet a laborvezetődhöz.
+
+    - A beadás akkor véglegesedik, ha a laborvezető hozzá van rendelve.
+    - A reviewers fülön válasszuk ki a megfelelő laborvezetőt.
+        ![Laborvezető hozzárendelése a pull requesthez](assets/github-pr-reviewer.png)
+
+1. Bizonyosodjunk meg róla, hogy a pull request állapota `Open`.
+
+    - Ha minden rendben van, akkor készen vagyunk.
+
+        ![Nyitott pull request állapotának ellenőrzése](assets/github-pr-open.png)
+
+## Ha a laborvezető további módosításokat kérne
+
+Előfordulhat olyan eset, hogy a laborvezető csak feltételekkel fogadja el a megoldást és további módosításokat kér. Erről email-ben kapsz értesítést, vagy a **Conversation** fülön is látható.
+
+![A laborvezető által kért módosítások pull requestben](assets/github-pr-changes-requested.png)
+
+Ebben az esetben ugyanúgy kell eljárni, mint a korábbi lépéseknél:
+
+- Nem szükséges a pull request törlése, vagy lezárása!
+- További commitok hozzáadása és pusholása után a változtatások automatikusan megjelennek a pull requestben.
+- Figyeljünk az automatikus ellenőrzésre!
+
+Ha készen vagy, menj a `Re-request review` gombra, amivel értesíted a laborvezetőt.
+
+<figure markdown>
+  ![Review újrakérése a javítások után](assets/github-pr-rerequest.png)
+</figure>
+
+## Értékelés utáni kérdés vagy reklamáció
+
+Ha a feladatok értékelésével vagy az eredménnyel kapcsolatban van kérdésed, használd a pull request kommentelési lehetőségét erre. Annak érdekében, hogy a laborvezető biztosan értesüljön a kérdésedről, használd a `@név` megemlítési funkciót a **laborvezető** megnevezéséhez. Erről automatikusan kapni fog egy email értesítést.
+
+![Pull request komment írása a laborvezetőnek](assets/github-pr-comment.png)
+
+!!! note "Reklamáció csak indoklással"
+    Ha nem értesz egyet az értékeléssel, a bizonyítás téged terhel, azaz alá kell támasztanod a reklamációt (pl. annak leírásával, hogyan tesztelted a megoldást, és mi bizonyítja a helyességét).
+
+## Mit lehet tenni, ha valamit elrontottál?
+
+És végül még egy fontos dolog: mi van, ha valamit elrontasz a folyamatban?
+
+- Ha rosszul adtad meg a GitHub nevedet a meghívó URL elfogadásakor, akkor nem fogsz hozzáférni a repository-dhoz. Ebben az esetben az [ahk.aut.bme.hu/my](https://ahk.aut.bme.hu/my) oldalon tudod javítani az elgépelést, majd ezután megkapod a megfelelő hozzáférést.
+
+- Ha még nem hoztad létre a pull requestet, akkor senki nem is látta, hogy valami félrement, kezdd nyugodtan újra az egészet, akár onnan, hogy egy új branchre még egyszer feltöltöd a labor megoldásodat. Lehet, hogy ott marad ekkor egy régi, fel nem használt branch, de ez senkit nem zavar.
+
+- Ha már létrehoztad a pull requestet, de még nem jött el a leadási határidő, így a laborvezetőd nemigen látta, nyugodtan zárd le (esetleg írd oda kommentbe vagy az elején lévő szövegbe, hogy ez nem a végleges és ne vegyük figyelembe).
+
+- Ha a forráskód szintjén maradt le valami, esetleg valamit utólag javítasz, akkor ha a pull request ágára (a fenti példában a “labor” ágra) kommitolsz a pull request létrehozása után, a módosítás automatikusan bekerül a pull requestbe is. Igaz, a laborvezetőd látni fogja az időbeli különbséget, így a határidő utáni módosítást is észre fogja venni, de a határidő előtt nyugodtan utólag is “hozzá lehet még csapni” pár módosítást, nem kell új pull requestet létrehozni.
+
+- És ami még egy kavarodási forrás: mi van akkor, ha elfelejtettél új branchet létrehozni és a masterre kommitoltad a megoldást? Általános szabály, hogy a pull request két ág különbsége. Vagyis ilyen esetben létrehozhatsz egy új branchet a labor megoldása előtti commitra (ahova eredetileg a masternek kellett volna mutatnia), és a pull requestben akkor megfordulnak a szerepek: a master lesz a megoldást tartalmazó és ez az új ág a “base”, vagyis a kiindulási alap. Gondolj arra, hogy a commitok gráfja a lényeg és az ágak csak egy-egy commitra mutatnak. Új ágakkal bármikor bárhova mutathatsz, bármelyiket bárhova áthelyezheted (reset művelet). Commitot elveszíteni igencsak nehéz, az ágakat pedig át lehet helyezni, így elég nagy kavarodásokat is viszonylag könnyen rendbe lehet rakni. Ami fontos, hogy mindig a commit gráfot nézd és abban gondolkodj!
+
+- Előfordulhat olyan is, hogy a masterre kommitoltál és nem tudsz pusholni. Ez azért van, mert egyes beállításoktól függően lehet, hogy a master védett, és nem enged közvetlenül pusholni. Ez egy jó indikátor arra, hogy valamit elrontottál. Ilyenkor több lehetőséged is van:
+
+  - Létrehozol egy új branchet az utolsó commithoz és azt az új branchet pusholod. Ilyenkor a masteren lévő extra commitok nem zavarnak be, mivel ezek csak a saját gépeden léteznek. Ha zavar akkor akár egy `git reset` parancs futtatásával ezeket törölheted is (de csak óvatosan, mivel ezzel a művelettel commitokat örökre elveszíthetsz!).
+
+  - Másik lehetőség, ha nem tudsz új branchet létrehozni (mivel például már adott egy másik amin dolgoznod kéne), akkor egyszerűen állj át arra a branchre amin dolgoznod kellene, majd pedig az egyes commitokat másold át a cherry-pick funkcióval (Jobb klikk a commitra, majd `Cherry-pick this commit` majd `OK`).
+
+- Ha megakadsz, kérj segítséget bizalommal!
