@@ -1,3 +1,3 @@
 # Hozzájárulás az anyaghoz
 
-A hozzájárulásról [itt](docs/tudnivalok/github/contributing.md) olvashatsz.
+A hozzájárulásról [itt](docs/github/contributing.md) olvashatsz.
