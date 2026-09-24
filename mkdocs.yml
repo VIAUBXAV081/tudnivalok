@@ -86,7 +86,6 @@ nav:
       - index.md
       - github/GitHub.md
       - github/GitHub-Actions.md
-      - github/GitHub-credentials.md
       - github/contributing.md
   - "Laborok":
       - laborok/mlops/index.md 
