@@ -7,7 +7,7 @@ A laborok sorrendjét és a beadások határidejét Moodle-ben találod.
 !!! note "Javítás az anyagban"
     A tárgy hallgatóinak az anyagban történő javításért, kiegészítésért plusz pontot adunk! Ha hibát találsz, vagy kiegészítenéd/pontosítanád a feladatleírásokat, nyiss egy _pull request_-et! A repository linkjét a jobb felső sarokban találod.
 
-    A javítás menetéről és formájáról bővebben a ["Hozzájárulás az anyaghoz"](tudnivalok/github/contributing.md) dokumentumban olvashatsz bővebben.
+    A javítás menetéről és formájáról bővebben a ["Hozzájárulás az anyaghoz"](github/contributing.md) dokumentumban olvashatsz bővebben.
 
 !!! quote "Felhasználási feltételek"
     Az itt található oktatási segédanyagok a BMEVIAUBXAV081 tárgy hallgatóinak készültek. Az anyagok oly módú felhasználása, amely a tárgy oktatásához nem szorosan kapcsolódik, csak a szerző(k) és a forrás megjelölésével történhet.
@@ -19,7 +19,7 @@ A laborok sorrendjét és a beadások határidejét Moodle-ben találod.
 
 ### Laborok megoldásainak beadása
 
-A laborok megoldását egy személyre szóló git repository-ban kell beadni. Ennek pontos [folyamatát lásd itt](tudnivalok/github/GitHub.md). Kérünk, hogy alaposan olvasd végig a leírást!
+A laborok megoldását egy személyre szóló git repository-ban kell beadni. Ennek pontos [folyamatát lásd itt](github/GitHub.md). Kérünk, hogy alaposan olvasd végig a leírást!
 
 !!! danger "FONTOS"
     A laborok elkészítése és beadása során az itt leírtak szerint **kell** eljárnod. A nem ilyen formában beadott megoldásokat nem értékeljük.
@@ -32,7 +32,7 @@ Minden labort külön jeggyel értékelünk. A teljesítés feltétele a határi
 
 A feladatok kiértékelése egyes laborok esetén részben **automatikusan** történik. A futtatható kódokat valóban le fogjuk futtatni, ezért minden esetben fontos a feladatleírások pontos követése (kiinduló kód váz használata, csak a megengedett fájlok változtatása, stb.)!
 
-A kiértékelés eredményéről a GitHub-on kapsz szöveges visszajelzést (lásd [itt](tudnivalok/github/GitHub.md)). Ha ennél több információra van szükséged, a _GitHub Actions_ webes felülete segítségül szolgálhat. Erről [itt](tudnivalok/github/GitHub-Actions.md) találsz egy rövid ismertetőt.
+A kiértékelés eredményéről a GitHub-on kapsz szöveges visszajelzést (lásd [itt](github/GitHub.md)). Ha ennél több információra van szükséged, a _GitHub Actions_ webes felülete segítségül szolgálhat. Erről [itt](github/GitHub-Actions.md) találsz egy rövid ismertetőt.
 
 ## Képernyőképek
 
